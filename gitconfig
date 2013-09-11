@@ -1,0 +1,30 @@
+[user]
+	name = Seiei Higa
+	email = hanachin@gmail.com
+[color]
+	ui = auto
+[core]
+	pager = lv -c
+	excludesfile = ~/.gitignore
+[alias]
+	ci = commit
+	st = status
+	co = checkout
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	br = branch
+	d = diff
+	dc = diff --cached
+	a = add
+	s = status
+	pom = push origin master
+	phm = push heroku master
+	b = branch
+[tig "bind"]
+	generic = g move-first-line
+	generic = G move-last-line
+[merge]
+	ff = false
+
+[merge "gemfilelock"]
+  name = relocks the gemfile.lock
+  driver = bundle install
