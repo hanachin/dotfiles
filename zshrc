@@ -66,3 +66,6 @@ export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+# 環境変数消えてしまうので再読み込みしてみる
+source ~/.zshenv
