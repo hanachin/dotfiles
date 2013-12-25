@@ -1,0 +1,2 @@
+export PATH=$PATH:/usr/local/bin
+export PATH=$(rbenv root)/shims:$(rbenv root)/bin:$PATH
