@@ -6,6 +6,7 @@
 [core]
 	pager = lv -c
 	excludesfile = ~/.gitignore
+	attributesfile = ~/.gitattributes
 [alias]
 	ci = commit
 	st = status
