@@ -57,3 +57,6 @@ else
   echo "install heroku toolbelt from here"
   echo "https://toolbelt.heroku.com/"
 fi
+
+# editor
+export EDITOR=emacs
