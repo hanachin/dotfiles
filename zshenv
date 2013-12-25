@@ -30,6 +30,7 @@ if [ ! -f "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ] && 
   echo "http://www.sublimetext.com/3"
 fi
 
+# git
 alias g=git
 alias ga='git add'
 alias gb='git branch'
