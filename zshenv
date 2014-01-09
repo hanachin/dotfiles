@@ -6,6 +6,9 @@ if [ -d /etc/profile.d ]; then
   done
 fi
 
+source /opt/boxen/env.sh
+export PATH="/Applications/Postgres93.app/Contents/MacOS/bin:$PATH"
+
 # rbenv(homebrew)
 if [ -d /usr/local/var/rbenv ]; then
   export RBENV_ROOT=/usr/local/var/rbenv
