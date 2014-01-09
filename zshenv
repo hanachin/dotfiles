@@ -9,16 +9,6 @@ fi
 source /opt/boxen/env.sh
 export PATH="/Applications/Postgres93.app/Contents/MacOS/bin:$PATH"
 
-# rbenv(homebrew)
-if [ -d /usr/local/var/rbenv ]; then
-  export RBENV_ROOT=/usr/local/var/rbenv
-else
-  if [ "Darwin" = `uname -s` ]; then
-    echo "install rbenv by following command"
-    echo "brew install rbenv ruby-build"
-  fi
-fi
-
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # home bin
@@ -52,14 +42,6 @@ alias -g REP="RAILS_ENV=production"
 alias raket='RAILS_ENV=test rake'
 alias raked='RAILS_ENV=development rake'
 alias rakep='RAILS_ENV=production rake'
-
-### Added by the Heroku Toolbelt
-if [ -d /usr/local/heroku ]; then
-  export PATH="/usr/local/heroku/bin:$PATH"
-else
-  echo "install heroku toolbelt from here"
-  echo "https://toolbelt.heroku.com/"
-fi
 
 # editor
 export EDITOR=emacs
