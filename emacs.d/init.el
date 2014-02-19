@@ -93,11 +93,3 @@
 
 ;; 改行と同時にインデント
 (setq indent-line-function 'indent-relative-maybe)
-
-;; auto-install.elでEmacsLispパッケージを自動インストール→anything.el関連を一括インストール - (rubikitch loves (Emacs Ruby CUI Books))
-;; http://d.hatena.ne.jp/rubikitch/20091221/autoinstall
-(require 'auto-install)
-(setq auto-install-directory "~/.emacs.d/auto-install/")
-(add-to-list 'load-path auto-install-directory)
-;; (auto-install-update-emacswiki-package-name t)
-(auto-install-compatibility-setup)
