@@ -73,6 +73,9 @@ source ~/.zshenv
 # added by travis gem
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
+# added by travis gem
+[ -f /Users/sei/.travis/travis.sh ] && source /Users/sei/.travis/travis.sh
+
 # [TODO] - save history in Dropbox directory
 HISTFILE=~/.zsh_history
 SAVEHIST=600000
