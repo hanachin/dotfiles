@@ -1,3 +1,61 @@
+;; Emacsの設定をやり直した！ - (define -ayalog '()) http://ayato.hateblo.jp/entry/20140112/1389533972
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+(package-initialize)
+
+(require 'cl)
+(defvar installing-package-list
+  '(
+    anything
+    anything-complete
+    anything-config
+    anything-match-plugin
+    anything-obsolete
+    anything-show-completion
+    auto-complete
+    auto-install
+    e2wm
+    popup
+    ruby-end
+    ruby-mode
+    window-layout
+    color-theme-solarized
+    helm
+    helm-ls-git
+    helm-rails
+    popwin
+    ))
+
+(let ((not-installed (loop for x in installing-package-list
+                            when (not (package-installed-p x))
+                            collect x)))
+  (when not-installed
+    (package-refresh-contents)
+    (dolist (pkg not-installed)
+        (package-install pkg))))
+
+;; anyting
+;; (require 'anything)
+;; (global-set-key (kbd "C-]") 'anything-for-files)
+
+;; helm
+;; (global-set-key (kbd "C-c h") 'helm-mini)
+(global-set-key (kbd "C-]") 'helm-mini)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
+(global-set-key (kbd "C-x C-d") 'helm-browse-project)
+(require 'helm-rails)
+
+;; (global-set-key (kbd "s-t") 'helm-rails-controllers)
+;; (global-set-key (kbd "s-y") 'helm-rails-models)
+;; (global-set-key (kbd "s-u") 'helm-rails-views)
+;; (global-set-key (kbd "s-o") 'helm-rails-specs)
+;; (global-set-key (kbd "s-r") 'helm-rails-all)
+;; (global-set-key (kbd "s-g") 'helm-rails-grep-all)
+
+(require 'popwin)
+(popwin-mode 1)
+
 ;; EmacsWiki: Meta Key Problems
 ;; http://www.emacswiki.org/emacs/MetaKeyProblems#toc15
 (setq mac-option-key-is-meta nil)
