@@ -50,7 +50,7 @@
 ;; (global-set-key (kbd "s-y") 'helm-rails-models)
 ;; (global-set-key (kbd "s-u") 'helm-rails-views)
 ;; (global-set-key (kbd "s-o") 'helm-rails-specs)
-;; (global-set-key (kbd "s-r") 'helm-rails-all)
+(global-set-key (kbd "s-r") 'helm-rails-all)
 ;; (global-set-key (kbd "s-g") 'helm-rails-grep-all)
 
 (require 'popwin)
