@@ -25,6 +25,8 @@
     helm-ls-git
     helm-rails
     popwin
+    multiple-cursors
+    smartrep
     ))
 
 (let ((not-installed (loop for x in installing-package-list
@@ -55,6 +57,13 @@
 
 (require 'popwin)
 (popwin-mode 1)
+
+;; https://github.com/magnars/multiple-cursors.el
+(require 'multiple-cursors)
+(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
 ;; EmacsWiki: Meta Key Problems
 ;; http://www.emacswiki.org/emacs/MetaKeyProblems#toc15
