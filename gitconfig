@@ -32,3 +32,5 @@
 [merge "gemfilelock"]
 	name = relocks the gemfile.lock
 	driver = bundle install
+[push]
+	default = simple
