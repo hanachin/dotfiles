@@ -33,6 +33,9 @@ alias gci='git commit'
 alias gd='git diff'
 alias gdc='git diff --cached'
 
+# bundler
+alias be='bundle exec'
+
 # rails
 alias -g RET="RAILS_ENV=test"
 alias -g RED="RAILS_ENV=development"
