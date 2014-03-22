@@ -17,6 +17,9 @@ if [ ! -d $HOME/bin ]; then
 fi
 export PATH=$HOME/bin:$PATH
 
+# atom
+alias atom='open -a Atom'
+
 # symlink to subl
 if [ ! -f "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ] && [ "Darwin" = `uname -s` ]; then
   echo "install sublime text 3 from here"
