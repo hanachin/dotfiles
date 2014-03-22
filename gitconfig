@@ -9,6 +9,7 @@
 	pager = lv -c
 	excludesfile = /opt/boxen/config/git/gitignore
 	attributesfile = ~/.gitattributes
+	precomposeunicode = true
 [alias]
 	ci = commit
 	st = status
