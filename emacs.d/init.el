@@ -28,6 +28,7 @@
     multiple-cursors
     smartrep
     markdown-mode
+    magit
     ))
 
 (let ((not-installed (loop for x in installing-package-list
