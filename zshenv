@@ -17,8 +17,9 @@ if [ ! -d $HOME/bin ]; then
 fi
 export PATH=$HOME/bin:$PATH
 
-# atom
+# MacApp editors
 alias atom='open -a Atom'
+alias cot='open -a CotEditor'
 
 # symlink to subl
 if [ ! -f "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ] && [ "Darwin" = `uname -s` ]; then
