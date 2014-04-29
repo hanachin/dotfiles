@@ -52,3 +52,4 @@ alias rakep='RAILS_ENV=production rake'
 
 # editor
 export EDITOR=emacs
+export DOCKER_HOST=tcp://localhost:4243
