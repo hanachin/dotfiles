@@ -29,7 +29,7 @@
 [hub]
 	protocol = https
 [merge]
-	ff = false
+	ff = true
 [merge "gemfilelock"]
 	name = relocks the gemfile.lock
 	driver = bundle install
