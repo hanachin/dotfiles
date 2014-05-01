@@ -53,3 +53,6 @@ alias rakep='RAILS_ENV=production rake'
 # editor
 export EDITOR=emacs
 export DOCKER_HOST=tcp://localhost:4243
+
+# rspec_api_documentation
+alias rspec-doc='rspec --format RspecApiDocumentation::ApiFormatter'
