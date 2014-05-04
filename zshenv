@@ -37,6 +37,9 @@ alias gci='git commit'
 alias gd='git diff'
 alias gdc='git diff --cached'
 
+# rbenv
+alias re='rbenv exec'
+
 # bundler
 alias be='bundle exec'
 
@@ -56,3 +59,4 @@ export DOCKER_HOST=tcp://localhost:4243
 
 # rspec_api_documentation
 alias rspec-doc='rspec --format RspecApiDocumentation::ApiFormatter'
+
