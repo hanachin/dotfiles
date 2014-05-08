@@ -60,3 +60,5 @@ export DOCKER_HOST=tcp://localhost:4243
 # rspec_api_documentation
 alias rspec-doc='rspec --format RspecApiDocumentation::ApiFormatter'
 
+# pyenv
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
