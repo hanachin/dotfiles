@@ -62,3 +62,8 @@ alias rspec-doc='rspec --format RspecApiDocumentation::ApiFormatter'
 
 # pyenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
+# node
+if [ -d $HOME/node_modules/.bin ]; then
+  export PATH=$HOME/node_modules/.bin:$PATH
+fi
