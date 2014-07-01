@@ -67,3 +67,7 @@ if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 if [ -d $HOME/node_modules/.bin ]; then
   export PATH=$HOME/node_modules/.bin:$PATH
 fi
+
+# go
+export PATH=$PATH:/opt/boxen/homebrew/opt/go/libexec/bin
+export GOPATH=$HOME
