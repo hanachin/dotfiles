@@ -71,3 +71,8 @@ fi
 # go
 export PATH=$PATH:/opt/boxen/homebrew/opt/go/libexec/bin
 export GOPATH=$HOME
+
+# ghq + peco
+# http://r7kamura.github.io/2014/06/21/ghq.html
+p() { peco | while read LINE; do $@ $LINE; done }
+alias e='ghq list -p | p cd'
