@@ -80,3 +80,6 @@ source ~/.zshenv
 HISTFILE=~/.zsh_history
 SAVEHIST=600000
 HISTSIZE=600000
+
+# tmuxinator
+source ~/.bin/tmuxinator.zsh
