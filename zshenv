@@ -39,6 +39,7 @@ alias gdc='git diff --cached'
 
 # rbenv
 alias re='rbenv exec'
+alias gme='gem'
 
 # bundler
 alias be='bundle exec'
