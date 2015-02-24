@@ -77,3 +77,10 @@ export GOPATH=$HOME
 # http://r7kamura.github.io/2014/06/21/ghq.html
 p() { peco | while read LINE; do $@ $LINE; done }
 alias e='ghq list -p | p cd'
+
+# ghs + peco
+# http://qiita.com/sona-tar/items/c11063cd3671c07b6e0a
+function gpi () {
+  [ "$#" -eq 0 ] && echo "Usage : gpi QUERY" && return 1
+  ghs "$@" | peco | awk '{print $1}' | ghq import
+}
