@@ -19,5 +19,6 @@ homebrew_package_names:
   - Homebrew/homebrew-versions/phantomjs198
   - rbenv
   - rbenv-default-gems
+  - rbenv-gem-rehash
   - ruby-build
   - tig
