@@ -19,3 +19,4 @@ homebrew_package_names:
   - rbenv
   - rbenv-default-gems
   - ruby-build
+  - tig
