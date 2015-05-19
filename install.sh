@@ -4,7 +4,7 @@ tempfile=/tmp/dotfiles.zip
 workspace=/tmp/dotfiles
 
 # Download zipped installer
-curl -LSfs -o ${tempfile} https://github.com/r7kamura/dotfiles/archive/master.zip
+curl -LSfs -o ${tempfile} https://github.com/hanachin/dotfiles/archive/master.zip
 
 # Unzip installer into workspace
 unzip -oq ${tempfile} -d ${workspace}
