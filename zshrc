@@ -83,3 +83,4 @@ HISTSIZE=600000
 
 # tmuxinator
 source ~/.bin/tmuxinator.zsh
+eval "$(direnv hook zsh)"
