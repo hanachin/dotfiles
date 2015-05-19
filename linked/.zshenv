@@ -52,9 +52,6 @@ alias rakep='RAILS_ENV=production bundle exec rake'
 # editor
 export EDITOR=emacs
 
-# pyenv
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
-
 # node
 if [ -d $HOME/node_modules/.bin ]; then
   export PATH=$HOME/node_modules/.bin:$PATH
