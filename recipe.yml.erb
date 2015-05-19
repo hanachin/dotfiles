@@ -17,3 +17,6 @@ resources:
     destination: /Users/<%= ENV["USER"] %>/src/github.com/hanachin/dotfiles/linked/<%= path %>
     source: /Users/<%= ENV["USER"] %>/<%= path %>
   <%- end -%>
+  - type: command
+    check_script: "finger -l | grep -E 'Shell: /bin/zsh$'"
+    script: sudo chsh -s /bin/zsh <%= ENV["USER"] %>
