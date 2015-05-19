@@ -12,5 +12,6 @@ dotfiles:
   - .zshenv
   - .zshrc
 homebrew_package_names:
+  - direnv
   - rbenv
   - ruby-build
