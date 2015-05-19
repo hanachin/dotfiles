@@ -10,6 +10,7 @@ fi
 export PATH="/Applications/Postgres93.app/Contents/MacOS/bin:$PATH"
 export PATH=$PATH:/usr/local/texlive/2014/bin/x86_64-darwin
 
+export RBENV_ROOT=/usr/local/var/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # home bin
