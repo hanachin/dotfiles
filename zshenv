@@ -84,3 +84,6 @@ function gpi () {
   [ "$#" -eq 0 ] && echo "Usage : gpi QUERY" && return 1
   ghs "$@" | peco | awk '{print $1}' | ghq import
 }
+
+# TeX
+export PATH=$PATH:/usr/local/texlive/2014/bin/x86_64-darwin
