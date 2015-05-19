@@ -1,3 +1,16 @@
+dotfiles:
+  - .bin
+  - .emacs.d
+  - .gemrc
+  - .gitattributes
+  - .gitconfig
+  - .hgrc
+  - .mavenrc
+  - .pryrc
+  - .tmux.conf
+  - .tmuxinator
+  - .zshenv
+  - .zshrc
 homebrew_package_names:
   - rbenv
   - ruby-build
