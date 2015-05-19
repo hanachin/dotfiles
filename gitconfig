@@ -5,7 +5,6 @@
 [color]
 	ui = auto
 [core]
-	pager = /opt/boxen/homebrew/bin/lv -c
 	excludesfile = /opt/boxen/config/git/gitignore
 	attributesfile = ~/.gitattributes
 	precomposeunicode = true
