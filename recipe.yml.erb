@@ -1,6 +1,10 @@
 resources:
   - type: command
     script: brew update
+  <%- homebrew_tap_names.each do |homebrew_tap_name| -%>
+  - type: homebrew_tap
+    name: <%= homebrew_tap_name %>
+  <%- end -%>
   <%- homebrew_package_names.each do |homebrew_package_name| -%>
   - type: homebrew_package
     name: <%= homebrew_package_name %>

@@ -14,11 +14,14 @@ dotfiles:
   - .zshrc
 homebrew_package_names:
   - direnv
-  - motemen/ghq/ghq
+  - ghq
   - peco
-  - Homebrew/homebrew-versions/phantomjs198
+  - phantomjs198
   - rbenv
   - rbenv-default-gems
   - rbenv-gem-rehash
   - ruby-build
   - tig
+homebrew_tap_names:
+  - homebrew/versions
+  - motemen/ghq
