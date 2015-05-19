@@ -7,6 +7,7 @@ dotfiles:
   - .hgrc
   - .mavenrc
   - .pryrc
+  - .rbenv/default-gems
   - .tmux.conf
   - .tmuxinator
   - .zshenv
@@ -16,4 +17,5 @@ homebrew_package_names:
   - motemen/ghq/ghq
   - peco
   - rbenv
+  - rbenv-default-gems
   - ruby-build
