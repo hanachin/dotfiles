@@ -6,8 +6,9 @@ if [ -d /etc/profile.d ]; then
   done
 fi
 
-source /opt/boxen/env.sh
+# OSX Apps
 export PATH="/Applications/Postgres93.app/Contents/MacOS/bin:$PATH"
+export PATH=$PATH:/usr/local/texlive/2014/bin/x86_64-darwin
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
@@ -20,12 +21,6 @@ export PATH=$HOME/bin:$PATH
 # MacApp editors
 alias atom='open -a Atom'
 alias cot='open -a CotEditor'
-
-# symlink to subl
-if [ ! -f "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ] && [ "Darwin" = `uname -s` ]; then
-  echo "install sublime text 3 from here"
-  echo "http://www.sublimetext.com/3"
-fi
 
 # git
 alias g=git
@@ -50,16 +45,12 @@ alias -g RED="RAILS_ENV=development"
 alias -g REP="RAILS_ENV=production"
 
 # rake
-alias raket='RAILS_ENV=test rake'
-alias raked='RAILS_ENV=development rake'
-alias rakep='RAILS_ENV=production rake'
+alias raket='RAILS_ENV=test bundle exec rake'
+alias raked='RAILS_ENV=development bundle exec rake'
+alias rakep='RAILS_ENV=production bundle exec rake'
 
 # editor
 export EDITOR=emacs
-export DOCKER_HOST=tcp://localhost:4243
-
-# rspec_api_documentation
-alias rspec-doc='rspec --format RspecApiDocumentation::ApiFormatter'
 
 # pyenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
@@ -70,7 +61,6 @@ if [ -d $HOME/node_modules/.bin ]; then
 fi
 
 # go
-export PATH=$PATH:/opt/boxen/homebrew/opt/go/libexec/bin
 export GOPATH=$HOME
 
 # ghq + peco
@@ -84,6 +74,3 @@ function gpi () {
   [ "$#" -eq 0 ] && echo "Usage : gpi QUERY" && return 1
   ghs "$@" | peco | awk '{print $1}' | ghq import
 }
-
-# TeX
-export PATH=$PATH:/usr/local/texlive/2014/bin/x86_64-darwin
