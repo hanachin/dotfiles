@@ -1,5 +1,4 @@
 [credential]
-	helper = /opt/boxen/bin/boxen-git-credential
 [user]
 	name = Seiei Miyagi
 	email = hanachin@gmail.com
