@@ -14,6 +14,7 @@ dotfiles:
   - .zshrc
 homebrew_package_names:
   - casperjs
+  - emacs
   - direnv
   - ghq
   - peco
