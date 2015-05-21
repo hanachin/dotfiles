@@ -6,6 +6,14 @@ if [ -d /etc/profile.d ]; then
   done
 fi
 
+# autoload
+
+autoload -Uz colors
+autoload -Uz compinit
+
+# exec
+colors
+
 # OSX Apps
 export PATH="/Applications/Postgres93.app/Contents/MacOS/bin:$PATH"
 export PATH=$PATH:/usr/local/texlive/2014/bin/x86_64-darwin
