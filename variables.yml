@@ -16,6 +16,7 @@ homebrew_package_names:
   - emacs
   - direnv
   - ghq
+  - node
   - peco
   - phantomjs198
   - rbenv
