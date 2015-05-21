@@ -4,6 +4,7 @@ dotfiles:
   - .gemrc
   - .gitattributes
   - .gitconfig
+  - .gitignore
   - .hgrc
   - .mavenrc
   - .pryrc
