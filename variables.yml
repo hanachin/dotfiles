@@ -10,7 +10,6 @@ dotfiles:
   - .rbenv/default-gems
   - .tmux.conf
   - .tmuxinator
-  - .zshenv
   - .zshrc
 homebrew_package_names:
   - casperjs
