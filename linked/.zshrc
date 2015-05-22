@@ -16,6 +16,7 @@ autoload -Uz compinit
 
 # exec
 colors
+compinit
 
 # OSX Apps
 export PATH="/Applications/Postgres93.app/Contents/MacOS/bin:$PATH"
