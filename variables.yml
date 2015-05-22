@@ -17,6 +17,7 @@ homebrew_package_names:
   - emacs
   - direnv
   - ghq
+  - git
   - gibo
   - hub
   - node
