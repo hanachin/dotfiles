@@ -6,6 +6,9 @@ if [ -d /etc/profile.d ]; then
   done
 fi
 
+# Homebrew
+fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
+
 # autoload
 
 autoload -Uz colors
