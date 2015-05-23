@@ -46,6 +46,8 @@ compinit
 # aliases
 alias a='git add'
 alias b='git branch'
+alias d='git diff'
+alias dc='git diff --cached'
 alias atom='open -a Atom'
 alias be='bundle exec'
 alias ci='git commit'
