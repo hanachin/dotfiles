@@ -21,22 +21,34 @@ setopt CORRECT
 setopt EXTENDED_HISTORY
 setopt SHARE_HISTORY
 
-# exec
-colors
-compinit
+# PATH
 
-# OSX Apps
+## OSX Apps
 export PATH="/Applications/Postgres93.app/Contents/MacOS/bin:$PATH"
 export PATH=$PATH:/usr/local/texlive/2014/bin/x86_64-darwin
 
-export RBENV_ROOT=/usr/local/var/rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
-# home bin
+## home bin
 if [ ! -d $HOME/bin ]; then
   mkdir $HOME/bin
 fi
 export PATH=$HOME/bin:$PATH
+
+## node
+if [ -d $HOME/node_modules/.bin ]; then
+  export PATH=$HOME/node_modules/.bin:$PATH
+fi
+
+# vars
+HISTFILE=~/.zsh_history
+SAVEHIST=600000
+HISTSIZE=600000
+
+# exec
+colors
+compinit
+
+export RBENV_ROOT=/usr/local/var/rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # MacApp editors
 alias atom='open -a Atom'
@@ -72,11 +84,6 @@ alias rakep='RAILS_ENV=production bundle exec rake'
 # editor
 export EDITOR=emacs
 
-# node
-if [ -d $HOME/node_modules/.bin ]; then
-  export PATH=$HOME/node_modules/.bin:$PATH
-fi
-
 # go
 export GOPATH=$HOME
 
@@ -94,10 +101,6 @@ function gpi () {
 
 # added by travis gem
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
-
-HISTFILE=~/.zsh_history
-SAVEHIST=600000
-HISTSIZE=600000
 
 # tmuxinator
 source ~/.bin/tmuxinator.zsh
