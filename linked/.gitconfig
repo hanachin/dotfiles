@@ -22,3 +22,5 @@
 	default = simple
 [ghq]
   root = ~/src
+[credential]
+	helper = /usr/local/bin/git-credential-osxkeychain
