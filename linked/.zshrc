@@ -38,7 +38,11 @@ if [ -d $HOME/node_modules/.bin ]; then
   export PATH=$HOME/node_modules/.bin:$PATH
 fi
 
-# vars
+# variables
+export EDITOR=emacs
+export GOPATH=$HOME
+
+# zshparam
 HISTFILE=~/.zsh_history
 SAVEHIST=600000
 HISTSIZE=600000
@@ -47,14 +51,17 @@ HISTSIZE=600000
 colors
 compinit
 
+# rbenv
 export RBENV_ROOT=/usr/local/var/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-# MacApp editors
+# aliases
+
+## MacApp editors
 alias atom='open -a Atom'
 alias cot='open -a CotEditor'
 
-# git
+## git
 alias g=git
 alias ga='git add'
 alias gb='git branch'
@@ -64,28 +71,22 @@ alias gci='git commit'
 alias gd='git diff'
 alias gdc='git diff --cached'
 
-# rbenv
+## rbenv
 alias re='rbenv exec'
 alias gme='gem'
 
-# bundler
+## bundler
 alias be='bundle exec'
 
-# rails
+## rails
 alias -g RET="RAILS_ENV=test"
 alias -g RED="RAILS_ENV=development"
 alias -g REP="RAILS_ENV=production"
 
-# rake
+## rake
 alias raket='RAILS_ENV=test bundle exec rake'
 alias raked='RAILS_ENV=development bundle exec rake'
 alias rakep='RAILS_ENV=production bundle exec rake'
-
-# editor
-export EDITOR=emacs
-
-# go
-export GOPATH=$HOME
 
 # ghq + peco
 # http://r7kamura.github.io/2014/06/21/ghq.html
