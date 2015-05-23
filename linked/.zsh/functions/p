@@ -1,0 +1,6 @@
+# functions
+## ghq + peco
+## http://r7kamura.github.io/2014/06/21/ghq.html
+p() { peco | while read LINE; do $@ $LINE; done }
+
+p $@

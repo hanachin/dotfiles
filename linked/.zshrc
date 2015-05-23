@@ -8,6 +8,7 @@ autoload -Uz compinit
 
 # autoload my funcs
 autoload -Uz gpi
+autoload -Uz p
 
 # setopt
 setopt AUTO_CD
@@ -77,11 +78,6 @@ alias s='git status'
 alias -g RED="RAILS_ENV=development"
 alias -g REP="RAILS_ENV=production"
 alias -g RET="RAILS_ENV=test"
-
-# functions
-## ghq + peco
-## http://r7kamura.github.io/2014/06/21/ghq.html
-p() { peco | while read LINE; do $@ $LINE; done }
 
 # rbenv
 export RBENV_ROOT=/usr/local/var/rbenv
