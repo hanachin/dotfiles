@@ -29,11 +29,6 @@ if [ ! -d $HOME/bin ]; then
 fi
 export PATH=$HOME/bin:$PATH
 
-## node
-if [ -d $HOME/node_modules/.bin ]; then
-  export PATH=$HOME/node_modules/.bin:$PATH
-fi
-
 # variables
 export EDITOR=emacs
 export GOPATH=$HOME
