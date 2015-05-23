@@ -12,6 +12,16 @@ dotfiles:
   - .tmux.conf
   - .tmuxinator
   - .zshrc
+dropbox_dotfiles:
+  - .bash_history
+  - .coffee_history
+  - .guard_history
+  - .mysql_history
+  - .pry_history
+  - .psql_history
+  - .rediscli_history
+  - .ruboty_history
+  - .zsh_history
 homebrew_package_names:
   - casperjs
   - emacs
