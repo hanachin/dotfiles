@@ -1,0 +1,7 @@
+## ghs + peco
+## http://qiita.com/sona-tar/items/c11063cd3671c07b6e0a
+func gpi () {
+  [ "$#" -eq 0 ] && echo "Usage : gpi QUERY" && return 1
+  ghs "$@" | peco | awk '{print $1}' | ghq import
+}
+gpi $@

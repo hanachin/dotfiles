@@ -11,6 +11,7 @@ dotfiles:
   - .rbenv/default-gems
   - .tmux.conf
   - .tmuxinator
+  - .zsh
   - .zshrc
 dropbox_dotfiles:
   - .bash_history

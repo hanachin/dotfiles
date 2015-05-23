@@ -1,10 +1,13 @@
-# Homebrew
 fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
+fpath=($HOME/.zsh/functions $fpath)
 
 # autoload
 
 autoload -Uz colors
 autoload -Uz compinit
+
+# autoload my funcs
+autoload -Uz gpi
 
 # setopt
 setopt AUTO_CD
@@ -79,13 +82,6 @@ alias -g RET="RAILS_ENV=test"
 ## ghq + peco
 ## http://r7kamura.github.io/2014/06/21/ghq.html
 p() { peco | while read LINE; do $@ $LINE; done }
-
-## ghs + peco
-## http://qiita.com/sona-tar/items/c11063cd3671c07b6e0a
-function gpi () {
-  [ "$#" -eq 0 ] && echo "Usage : gpi QUERY" && return 1
-  ghs "$@" | peco | awk '{print $1}' | ghq import
-}
 
 # rbenv
 export RBENV_ROOT=/usr/local/var/rbenv
