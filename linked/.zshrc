@@ -51,10 +51,6 @@ HISTSIZE=600000
 colors
 compinit
 
-# rbenv
-export RBENV_ROOT=/usr/local/var/rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
 # aliases
 
 ## MacApp editors
@@ -88,17 +84,22 @@ alias raket='RAILS_ENV=test bundle exec rake'
 alias raked='RAILS_ENV=development bundle exec rake'
 alias rakep='RAILS_ENV=production bundle exec rake'
 
-# ghq + peco
-# http://r7kamura.github.io/2014/06/21/ghq.html
+# functions
+## ghq + peco
+## http://r7kamura.github.io/2014/06/21/ghq.html
 p() { peco | while read LINE; do $@ $LINE; done }
 alias e='ghq list -p | p cd'
 
-# ghs + peco
-# http://qiita.com/sona-tar/items/c11063cd3671c07b6e0a
+## ghs + peco
+## http://qiita.com/sona-tar/items/c11063cd3671c07b6e0a
 function gpi () {
   [ "$#" -eq 0 ] && echo "Usage : gpi QUERY" && return 1
   ghs "$@" | peco | awk '{print $1}' | ghq import
 }
+
+# rbenv
+export RBENV_ROOT=/usr/local/var/rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # added by travis gem
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
@@ -106,4 +107,5 @@ function gpi () {
 # tmuxinator
 source ~/.bin/tmuxinator.zsh
 
+# direnv
 eval "$(direnv hook zsh)"
