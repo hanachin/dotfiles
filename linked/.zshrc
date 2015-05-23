@@ -44,43 +44,32 @@ colors
 compinit
 
 # aliases
-
-## MacApp editors
 alias atom='open -a Atom'
+alias be='bundle exec'
 alias cot='open -a CotEditor'
-
-## git
+alias e='ghq list -p | p cd'
 alias g=git
 alias ga='git add'
 alias gb='git branch'
-alias gs='git status'
-alias gco='git checkout'
 alias gci='git commit'
+alias gco='git checkout'
 alias gd='git diff'
 alias gdc='git diff --cached'
-
-## rbenv
-alias re='rbenv exec'
 alias gme='gem'
-
-## bundler
-alias be='bundle exec'
-
-## rails
-alias -g RET="RAILS_ENV=test"
-alias -g RED="RAILS_ENV=development"
-alias -g REP="RAILS_ENV=production"
-
-## rake
-alias raket='RAILS_ENV=test bundle exec rake'
+alias gs='git status'
+alias re='rbenv exec'
 alias raked='RAILS_ENV=development bundle exec rake'
 alias rakep='RAILS_ENV=production bundle exec rake'
+alias raket='RAILS_ENV=test bundle exec rake'
+
+alias -g RED="RAILS_ENV=development"
+alias -g REP="RAILS_ENV=production"
+alias -g RET="RAILS_ENV=test"
 
 # functions
 ## ghq + peco
 ## http://r7kamura.github.io/2014/06/21/ghq.html
 p() { peco | while read LINE; do $@ $LINE; done }
-alias e='ghq list -p | p cd'
 
 ## ghs + peco
 ## http://qiita.com/sona-tar/items/c11063cd3671c07b6e0a
