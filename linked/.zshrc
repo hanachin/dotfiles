@@ -17,6 +17,7 @@ autoload -Uz compinit
 # setopt
 setopt AUTO_PUSHD
 setopt SHARE_HISTORY
+setopt EXTENDED_HISTORY
 
 # exec
 colors
