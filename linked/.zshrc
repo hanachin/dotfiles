@@ -15,6 +15,7 @@ autoload -Uz colors
 autoload -Uz compinit
 
 # setopt
+setopt AUTO_PUSHD
 setopt SHARE_HISTORY
 
 # exec
