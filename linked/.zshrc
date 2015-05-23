@@ -44,8 +44,12 @@ colors
 compinit
 
 # aliases
+alias a='git add'
+alias b='git branch'
 alias atom='open -a Atom'
 alias be='bundle exec'
+alias ci='git commit'
+alias co='git checkout'
 alias cot='open -a CotEditor'
 alias e='ghq list -p | p cd'
 alias g=git
@@ -61,6 +65,7 @@ alias re='rbenv exec'
 alias raked='RAILS_ENV=development bundle exec rake'
 alias rakep='RAILS_ENV=production bundle exec rake'
 alias raket='RAILS_ENV=test bundle exec rake'
+alias s='git status'
 
 alias -g RED="RAILS_ENV=development"
 alias -g REP="RAILS_ENV=production"
