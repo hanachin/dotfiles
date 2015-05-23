@@ -14,6 +14,9 @@ fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
 autoload -Uz colors
 autoload -Uz compinit
 
+# setopt
+setopt SHARE_HISTORY
+
 # exec
 colors
 compinit
