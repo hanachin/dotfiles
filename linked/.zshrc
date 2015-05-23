@@ -2,13 +2,12 @@ fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
 fpath=($HOME/.zsh/functions $fpath)
 
 # autoload
-
-autoload -Uz colors
 autoload -Uz compinit
 
 # autoload my funcs
 autoload -Uz gpi
 autoload -Uz p
+autoload -Uz promptori
 
 # setopt
 setopt AUTO_CD
@@ -39,8 +38,8 @@ SAVEHIST=600000
 HISTSIZE=600000
 
 # exec
-colors
 compinit
+promptori
 
 # aliases
 alias a='git add'

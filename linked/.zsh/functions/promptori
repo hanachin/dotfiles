@@ -1,0 +1,48 @@
+autoload -Uz add-zsh-hook
+autoload -Uz colors
+autoload -Uz spectrum
+autoload -Uz vcs_info
+
+colors
+spectrum
+
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git:*' stagedstr '✚'
+zstyle ':vcs_info:git:*' unstagedstr '●'
+zstyle ':vcs_info:git:*' formats '%b%c%u'
+zstyle ':vcs_info:git:*' actionformats '%b%c%u'
+
+func _update_vcs_info_msg() {
+  local repo_path
+
+  repo_path=$(git rev-parse --git-dir 2>/dev/null)
+
+  if $(git rev-parse --is-inside-work-tree >/dev/null 2>&1); then
+    if [[ -e "${repo_path}/BISECT_LOG" ]]; then
+      mode=" <B>"
+    elif [[ -e "${repo_path}/MERGE_HEAD" ]]; then
+      mode=" >M<"
+    elif [[ -e "${repo_path}/rebase" || -e "${repo_path}/rebase-apply" || -e "${repo_path}/rebase-merge" || -e "${repo_path}/../.dotest" ]]; then
+      mode=" >R>"
+    fi
+  fi
+
+  psvar=()
+  vcs_info
+  [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="${vcs_info_msg_0_}${mode}"
+}
+
+add-zsh-hook precmd _update_vcs_info_msg
+
+tori_mane=${FG[226]}
+tori_eye="%(?:${fg[white]} ŏ:${FG[045]}இ )"
+tori_cheek="${FG[202]}"
+tori_beak="${FG[227]}"
+tori_body="${FG[230]}"
+tori_tail="${FG[229]}"
+tori_speak="${FG[242]}"
+tori_text="${FG[250]}"
+tori_condition="%(?:${FG[120]}ﾔﾊﾞｲ:${FG[196]}ﾔﾊﾞｲ)"
+PROMPT="${tori_body}    ${tori_mane}_╰╰,${reset_color}   ${tori_speak}/ﾊﾞｼｮ :${reset_color} ${tori_text}%~
+  ${tori_body}_/${tori_cheek}o${tori_eye}${tori_beak}ｧ${reset_color}  ${tori_speak}/ %1(v:ﾌﾞﾗﾝﾁ:ﾀｲﾁｮｰ):${reset_color} %1(v|${FG[245]}%1v |)${tori_condition}${reset_color}
+%{${tori_tail}%}∈%{${reset_color}%}%{${tori_body}%}ミ;ﾉ,ﾉ%{${reset_color}%}   %{${tori_speak}%}＼ｺﾏﾝﾄﾞ%#%{${reset_color}%} "
