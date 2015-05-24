@@ -39,6 +39,7 @@ homebrew_package_names:
   - rbenv-gem-rehash
   - ruby-build
   - tig
+  - tree
 homebrew_tap_names:
   - homebrew/versions
   - motemen/ghq
