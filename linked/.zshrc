@@ -37,6 +37,9 @@ HISTFILE=~/.zsh_history
 SAVEHIST=600000
 HISTSIZE=600000
 
+# keybind
+bindkey -e
+
 # exec
 compinit
 promptori
