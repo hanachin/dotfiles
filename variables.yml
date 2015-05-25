@@ -36,6 +36,7 @@ homebrew_package_names:
   - node
   - peco
   - phantomjs198
+  - q
   - rbenv
   - rbenv-default-gems
   - rbenv-gem-rehash
