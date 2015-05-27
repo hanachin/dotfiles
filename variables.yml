@@ -23,6 +23,7 @@ dropbox_dotfiles:
   - .ruboty_history
   - .zsh_history
 homebrew_package_names:
+  - caskroom/cask/brew-cask
   - casperjs
   - emacs
   - direnv
