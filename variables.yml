@@ -8,7 +8,6 @@ dotfiles:
   - .hgrc
   - .mavenrc
   - .pryrc
-  - .rbenv/default-gems
   - .tmux.conf
   - .tmuxinator
   - .zsh

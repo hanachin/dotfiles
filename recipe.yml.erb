@@ -32,6 +32,9 @@ resources:
     destination: /Users/<%= ENV["USER"] %>/src/github.com/hanachin/dotfiles/linked/<%= path %>
     source: /Users/<%= ENV["USER"] %>/<%= path %>
   <%- end -%>
+  - type: symlink
+    destination: /Users/<%= ENV["USER"] %>/src/github.com/hanachin/dotfiles/linked/.rbenv/default-gems
+    source: <%= ENV["RBENV_ROOT"] %>/default-gems
   <%- dropbox_dotfiles.each do |path| -%>
   - type: symlink
     destination: /Users/<%= ENV["USER"] %>/Dropbox/dotfiles/<%= path %>
