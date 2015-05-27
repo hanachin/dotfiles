@@ -47,3 +47,6 @@ homebrew_package_names:
 homebrew_tap_names:
   - homebrew/versions
   - motemen/ghq
+rbenv_ruby_versions:
+  - 2.0.0-p645
+  - 2.1.3
