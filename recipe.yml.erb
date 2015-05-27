@@ -47,3 +47,6 @@ resources:
   - type: command
     check_script: "finger -l | grep -E 'Shell: /bin/zsh$'"
     script: sudo chsh -s /bin/zsh <%= ENV["USER"] %>
+  - type: command
+    check_script: heroku plugins | grep docker
+    script: heroku plugins:install heroku-docker
