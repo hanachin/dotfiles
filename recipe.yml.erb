@@ -9,13 +9,13 @@ resources:
   - type: homebrew_package
     name: <%= homebrew_package_name %>
   <%- end -%>
-  - type: rbenv_ruby
-    version: 2.2.2
-    global: true
   <%- rbenv_ruby_versions.each do |ruby_version| -%>
   - type: rbenv_ruby
     version: <%= ruby_version %>
   <%- end -%>
+  - type: rbenv_ruby
+    version: 2.2.2
+    global: true
   - type: git
     repository: https://github.com/hanachin/dotfiles.git
     path: /Users/<%= ENV["USER"] %>/src/github.com/hanachin/dotfiles
