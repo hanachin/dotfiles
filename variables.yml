@@ -25,10 +25,12 @@ dropbox_dotfiles:
 homebrew_cask_package_names:
   - boot2docker-status
 homebrew_package_names:
+  - boot2docker
   - caskroom/cask/brew-cask
   - casperjs
   - emacs
   - direnv
+  - docker
   - ghq
   - git
   - gibo
