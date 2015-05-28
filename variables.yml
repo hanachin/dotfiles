@@ -39,6 +39,7 @@ homebrew_package_names:
   - nkf
   - node
   - peco
+  - phantomjs
   - phantomjs198
   - q
   - rbenv
