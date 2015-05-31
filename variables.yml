@@ -5,6 +5,7 @@ dotfiles:
   - .gitattributes
   - .gitconfig
   - .gitignore
+  - .gittemplate
   - .hgrc
   - .mavenrc
   - .pryrc
