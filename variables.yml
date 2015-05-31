@@ -36,6 +36,7 @@ homebrew_package_names:
   - gibo
   - heroku-toolbelt
   - hub
+  - imagemagick
   - jq
   - nkf
   - node
