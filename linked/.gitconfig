@@ -21,3 +21,5 @@
   root = ~/src
 [credential]
 	helper = /usr/local/bin/git-credential-osxkeychain
+[init]
+	templatedir = /Users/sei/.gittemplate
