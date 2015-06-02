@@ -25,6 +25,7 @@ dropbox_dotfiles:
   - .zsh_history
 homebrew_cask_package_names:
   - boot2docker-status
+  - calibre
 homebrew_package_names:
   - boot2docker
   - chromedriver
