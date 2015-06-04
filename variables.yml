@@ -42,6 +42,7 @@ homebrew_package_names:
   - jq
   - nkf
   - node
+  - pandoc
   - peco
   - phantomjs
   - phantomjs198
