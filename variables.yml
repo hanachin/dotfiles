@@ -26,7 +26,7 @@ dropbox_dotfiles:
 homebrew_cask_package_names:
   - boot2docker-status
   - calibre
-  - gpgtools
+#  - gpgtools # password prompt出るからコメントアウト
 homebrew_package_names:
   - boot2docker
   - chromedriver
