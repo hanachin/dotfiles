@@ -26,6 +26,7 @@ dropbox_dotfiles:
 homebrew_cask_package_names:
   - boot2docker-status
   - calibre
+  - gpgtools
 homebrew_package_names:
   - boot2docker
   - chromedriver
