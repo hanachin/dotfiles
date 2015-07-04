@@ -53,6 +53,7 @@ homebrew_package_names:
   - rbenv
   - rbenv-default-gems
   - rbenv-gem-rehash
+  - redis
   - ruby-build
   - tig
   - tree
