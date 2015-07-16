@@ -23,3 +23,5 @@
 	helper = /usr/local/bin/git-credential-osxkeychain
 [init]
 	templatedir = /Users/sei/.gittemplate
+[alias]
+  delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
