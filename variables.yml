@@ -1,4 +1,5 @@
 dotfiles:
+  - .bash_profile
   - .bin
   - .emacs.d
   - .gemrc
