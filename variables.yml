@@ -47,6 +47,7 @@ homebrew_package_names:
   - imagemagick
   - jq
   - mysql51
+  - ngrok
   - nkf
   - node
   - pandoc
