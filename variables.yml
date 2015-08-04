@@ -24,6 +24,7 @@ dropbox_dotfiles:
   - .rediscli_history
   - .ruboty_history
   - .zsh_history
+  - .boot2docker/profile
 homebrew_cask_package_names:
   - boot2docker-status
   - calibre
