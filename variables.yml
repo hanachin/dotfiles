@@ -1,6 +1,6 @@
 dotfiles:
   - .bash_profile
-  - .bin
+  - .bin/tmuxinator.zsh
   - .emacs.d/init.el
   - .gemrc
   - .gitattributes
