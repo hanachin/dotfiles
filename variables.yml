@@ -1,6 +1,7 @@
 dotfiles:
   - .bash_profile
   - .bin/tmuxinator.zsh
+  - .boot2docker/profile
   - .emacs.d/init.el
   - .gemrc
   - .gitattributes
@@ -23,7 +24,6 @@ dropbox_dotfiles:
   - .rediscli_history
   - .ruboty_history
   - .zsh_history
-  - .boot2docker/profile
 homebrew_cask_package_names:
   - boot2docker-status
   - calibre
