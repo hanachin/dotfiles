@@ -65,6 +65,7 @@ homebrew_package_names:
   - ruby-build
   - tig
   - tree
+  - wget
 homebrew_tap_names:
   - homebrew/versions
   - motemen/ghq
