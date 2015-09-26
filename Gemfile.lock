@@ -1,10 +1,10 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activemodel (4.2.1)
-      activesupport (= 4.2.1)
+    activemodel (4.2.4)
+      activesupport (= 4.2.4)
       builder (~> 3.1)
-    activesupport (4.2.1)
+    activesupport (4.2.4)
       i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
       minitest (~> 5.1)
@@ -12,15 +12,16 @@ GEM
       tzinfo (~> 1.1)
     builder (3.2.2)
     hashie (3.4.2)
-    highline (1.7.2)
+    highline (1.7.7)
     i18n (0.7.0)
     json (1.8.3)
-    minitest (5.7.0)
+    minitest (5.8.1)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.2)
+    net-telnet (0.1.1)
     rainbow (2.0.0)
-    serverkit (0.6.2)
+    serverkit (0.6.5)
       activemodel
       activesupport
       bundler
@@ -28,17 +29,20 @@ GEM
       highline
       rainbow
       slop (~> 3.4)
-      specinfra (>= 2.29.0)
+      specinfra (>= 2.31.0)
       unix-crypt
     serverkit-homebrew (0.0.5)
       serverkit
     serverkit-rbenv (0.3.1)
       serverkit (>= 0.6.2)
       specinfra (>= 2.31.1)
+    sfl (2.2)
     slop (3.6.0)
-    specinfra (2.34.6)
+    specinfra (2.43.8)
       net-scp
-      net-ssh
+      net-ssh (~> 2.7)
+      net-telnet
+      sfl
     thread_safe (0.3.5)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
@@ -53,4 +57,4 @@ DEPENDENCIES
   serverkit-rbenv
 
 BUNDLED WITH
-   1.10.3
+   1.10.6
