@@ -31,6 +31,7 @@ homebrew_cask_package_names:
   - gyazo
   - postgres
   - rubymine
+  - steam
 homebrew_package_names:
   - ansible
   - boot2docker
