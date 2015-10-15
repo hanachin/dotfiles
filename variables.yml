@@ -27,8 +27,10 @@ dropbox_dotfiles:
 homebrew_cask_package_names:
   - boot2docker-status
   - calibre
-#  - gpgtools # password prompt出るからコメントアウト
+#  - flip4mac # password prompt出るからコメントアウト
+#  - gpgtools # 〃
   - gyazo
+  - lyrics-master
   - postgres
   - rubymine
   - steam
