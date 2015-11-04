@@ -66,6 +66,7 @@ homebrew_package_names:
   - rbenv-gem-rehash
   - redis
   - ruby-build
+  - terminal-notifier
   - tig
   - tree
   - wget

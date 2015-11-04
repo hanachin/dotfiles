@@ -6,6 +6,7 @@ autoload -Uz compinit
 
 # autoload my funcs
 autoload -Uz gpi
+autoload -Uz growl
 autoload -Uz p
 autoload -Uz promptori
 
