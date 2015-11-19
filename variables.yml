@@ -29,6 +29,7 @@ homebrew_cask_package_names:
   - calibre
 #  - flip4mac # password prompt出るからコメントアウト
 #  - gpgtools # 〃
+  - dropbox
   - gyazo
   - lyrics-master
   - postgres
