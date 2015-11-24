@@ -54,6 +54,7 @@ homebrew_package_names:
   - hub
   - imagemagick
   - jq
+  - mono
   - mysql51
   - ngrok
   - nkf
