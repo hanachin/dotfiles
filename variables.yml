@@ -49,6 +49,7 @@ homebrew_package_names:
   - fig
   - ghq
   - git
+  - git-lfs
   - gibo
   - heroku-toolbelt
   - hub
