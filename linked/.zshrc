@@ -98,3 +98,6 @@ export DOCKER_TLS_VERIFY=1
 
 # mono
 export MONO_GAC_PREFIX="/usr/local"
+
+# Java
+export JAVA_HOME='/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home'
