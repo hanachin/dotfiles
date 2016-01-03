@@ -21,7 +21,7 @@ setopt SHARE_HISTORY
 
 ## OSX Apps
 export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
-export PATH=$PATH:/usr/local/texlive/2014/bin/x86_64-darwin
+export PATH=$PATH:/usr/local/texlive/2015/bin/x86_64-darwin
 export PATH=$PATH:~/Applications/calibre.app/Contents/MacOS
 
 ## home bin
