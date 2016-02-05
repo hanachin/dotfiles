@@ -101,3 +101,6 @@ export MONO_GAC_PREFIX="/usr/local"
 
 # Java
 export JAVA_HOME='/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home'
+
+# Android
+export ANDROID_HOME=/usr/local/opt/android-sdk

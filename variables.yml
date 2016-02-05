@@ -36,6 +36,7 @@ homebrew_cask_package_names:
   - rubymine
   - steam
 homebrew_package_names:
+  - android
   - ansible
   - boot2docker
   - chromedriver
