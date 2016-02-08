@@ -2,6 +2,7 @@
 [user]
 	name = Seiei Miyagi
 	email = hanachin@gmail.com
+	signingkey = 31B0FD4A
 [color]
 	ui = auto
 [core]
@@ -29,3 +30,5 @@
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
+[gpg]
+	program = gpg2
