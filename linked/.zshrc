@@ -104,3 +104,7 @@ export JAVA_HOME='/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Ho
 
 # Android
 export ANDROID_HOME=/usr/local/opt/android-sdk
+
+# nodebrew
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+export NODEBREW_ROOT=/usr/local/var/nodebrew
