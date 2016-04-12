@@ -62,7 +62,8 @@ homebrew_package_names:
   - mysql51
   - ngrok
   - nkf
-  - node
+  # - node
+  - nodebrew
   - pandoc
   - peco
   - phantomjs
