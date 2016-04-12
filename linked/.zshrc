@@ -107,4 +107,3 @@ export ANDROID_HOME=/usr/local/opt/android-sdk
 
 # nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
-export NODEBREW_ROOT=/usr/local/var/nodebrew
