@@ -12,7 +12,6 @@ homebrew_package_names:
   - android-sdk
   - ansible
   - chromedriver
-  - caskroom/cask/brew-cask
   - cmake
   - coreutils
   - emacs
