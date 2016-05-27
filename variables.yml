@@ -1,5 +1,4 @@
 dotfiles:
-  - .bin/tmuxinator.zsh
   - .boot2docker/profile
   - .emacs.d/init.el
   - .zsh
