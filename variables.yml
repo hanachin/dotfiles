@@ -43,6 +43,7 @@ homebrew_package_names:
   - tig
   - tree
   - wget
+  - zplug
 homebrew_tap_names:
   - homebrew/versions
   - thoughtbot/formulae
