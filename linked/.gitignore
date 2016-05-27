@@ -58,3 +58,6 @@ tramp
 .envrc
 
 .vagrant
+
+# RubyMine
+.idea
