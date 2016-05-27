@@ -8,16 +8,6 @@ dropbox_dotfiles:
   - .rediscli_history
   - .ruboty_history
   - .zsh_history
-homebrew_cask_package_names:
-  - calibre
-#  - flip4mac # password prompt出るからコメントアウト
-#  - gpgtools # 〃
-  - dropbox
-  - gyazo
-  - lyrics-master
-  - postgres
-  - rubymine
-  - steam
 homebrew_package_names:
   - android
   - ansible
