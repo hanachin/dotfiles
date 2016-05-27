@@ -14,9 +14,6 @@ resources:
     script: go get <%= go_package_name %>
   <%- end -%>
   - type: homebrew_package
-    name: casperjs
-    options: --devel
-  - type: homebrew_package
     name: graphviz
     options: --with-app --with-librsvg
   <%- rbenv_ruby_versions.each do |ruby_version| -%>
