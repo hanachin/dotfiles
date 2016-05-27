@@ -5,7 +5,6 @@ dotfiles:
   - .gittemplate
   - .tmux.conf
   - .zsh
-  - .zshrc
 dropbox_dotfiles:
   - .bash_history
   - .coffee_history
