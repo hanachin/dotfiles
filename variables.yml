@@ -3,7 +3,6 @@ dotfiles:
   - .boot2docker/profile
   - .emacs.d/init.el
   - .gittemplate
-  - .tmux.conf
   - .zsh
 dropbox_dotfiles:
   - .bash_history
