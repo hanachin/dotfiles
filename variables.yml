@@ -72,6 +72,7 @@ homebrew_package_names:
   - rbenv
   - rbenv-default-gems
   - rbenv-gem-rehash
+  - rcm
   - redis
   - ruby-build
   - terminal-notifier
