@@ -9,6 +9,10 @@ resources:
   - type: homebrew_package
     name: <%= homebrew_package_name %>
   <%- end -%>
+  <%- go_package_names.each do |go_package_name| -%>
+  - type: command
+    script: go get <%= go_package_name %>
+  <%- end -%>
   - type: homebrew_package
     name: casperjs
     options: --devel

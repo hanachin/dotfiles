@@ -17,10 +17,10 @@ homebrew_package_names:
   - emacs
   - elasticsearch
   - direnv
-  # - ghq
   - git
   - git-lfs
   - gibo
+  - go
   - heroku
   - hub
   - imagemagick
@@ -29,7 +29,6 @@ homebrew_package_names:
   - mysql
   - ngrok
   - nkf
-  # - node
   - nodebrew
   - peco
   - phantomjs
@@ -46,7 +45,8 @@ homebrew_package_names:
   - wget
 homebrew_tap_names:
   - homebrew/versions
-  - motemen/ghq
   - thoughtbot/formulae
+go_package_names:
+  - github.com/motemen/ghq
 rbenv_ruby_versions:
   - 2.3.1
