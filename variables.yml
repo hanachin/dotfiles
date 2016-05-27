@@ -6,7 +6,6 @@ dotfiles:
   - .gemrc
   - .gitattributes
   - .gitconfig
-  - .gitignore
   - .gittemplate
   - .hgrc
   - .mavenrc
