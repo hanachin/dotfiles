@@ -27,13 +27,6 @@ resources:
     repository: https://github.com/hanachin/dotfiles.git
     path: /Users/<%= ENV["USER"] %>/src/github.com/hanachin/dotfiles
     status: updated
-  - type: git
-    repository: git@github.com:sgymtic/sl.git
-    path: /Users/<%= ENV["USER"] %>/src/github.com/sgymtic/sl
-    status: updated
-  - type: command
-    script: cd /Users/<%= ENV["USER"] %>/src/github.com/sgymtic/sl; make && mkdir -p /Users/<%= ENV["USER"] %>/bin && cp erutaso /Users/<%= ENV["USER"] %>/bin
-    check_script: ls /Users/<%= ENV["USER"] %>/src/github.com/sgymtic/sl | grep erutaso
   - type: command
     script: mkdir -p /Users/<%= ENV["USER"] %>/.bin
   - type: command
