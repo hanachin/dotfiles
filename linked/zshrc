@@ -102,3 +102,6 @@ export ANDROID_HOME=/usr/local/opt/android-sdk
 
 # nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
+
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
