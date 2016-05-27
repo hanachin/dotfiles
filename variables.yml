@@ -2,7 +2,6 @@ dotfiles:
   - .bin/tmuxinator.zsh
   - .boot2docker/profile
   - .emacs.d/init.el
-  - .gittemplate
   - .zsh
 dropbox_dotfiles:
   - .bash_history
