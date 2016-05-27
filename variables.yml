@@ -82,6 +82,7 @@ homebrew_package_names:
 homebrew_tap_names:
   - homebrew/versions
   - motemen/ghq
+  - thoughtbot/formulae
 rbenv_ruby_versions:
   - 2.0.0-p353
   - 2.0.0-p645
