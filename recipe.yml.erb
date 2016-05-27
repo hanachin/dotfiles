@@ -41,9 +41,9 @@ resources:
     script: mkdir -p /Users/<%= ENV["USER"] %>/.bin
   - type: command
     script: mkdir -p /Users/<%= ENV["USER"] %>/.emacs.d
-  - type: symlink
-    destination: /Users/<%= ENV["USER"] %>/src/github.com/hanachin/dotfiles/linked/.rbenv/default-gems
-    source: <%= ENV["RBENV_ROOT"] %>/default-gems
+  - type: template
+    destination: <%= ENV["RBENV_ROOT"] %>/default-gems
+    source: files/default-gems
   <%- dropbox_dotfiles.each do |path| -%>
   - type: symlink
     destination: /Users/<%= ENV["USER"] %>/Dropbox/dotfiles/<%= path %>
