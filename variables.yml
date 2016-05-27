@@ -1,5 +1,3 @@
-dotfiles:
-  - .boot2docker/profile
 dropbox_dotfiles:
   - .bash_history
   - .coffee_history
@@ -11,7 +9,6 @@ dropbox_dotfiles:
   - .ruboty_history
   - .zsh_history
 homebrew_cask_package_names:
-  - boot2docker-status
   - calibre
 #  - flip4mac # password prompt出るからコメントアウト
 #  - gpgtools # 〃
@@ -24,7 +21,6 @@ homebrew_cask_package_names:
 homebrew_package_names:
   - android
   - ansible
-  - boot2docker
   - chromedriver
   - caskroom/cask/brew-cask
   - cmake
@@ -32,7 +28,6 @@ homebrew_package_names:
   - emacs
   - elasticsearch
   - direnv
-  - docker
   - elixir
   - fig
   - ghq
