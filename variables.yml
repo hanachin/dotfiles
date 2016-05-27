@@ -3,7 +3,6 @@ dotfiles:
   - .boot2docker/profile
   - .emacs.d/init.el
   - .gittemplate
-  - .pryrc
   - .tmux.conf
   - .zsh
   - .zshrc
