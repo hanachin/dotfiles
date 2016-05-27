@@ -28,28 +28,23 @@ homebrew_package_names:
   - emacs
   - elasticsearch
   - direnv
-  - elixir
-  - fig
-  - ghq
+  # - ghq
   - git
   - git-lfs
   - gibo
-  - heroku-toolbelt
+  - heroku
   - hub
   - imagemagick
   - jq
   - kibana
-  - mono
-  - mysql51
+  - mysql
   - ngrok
   - nkf
   # - node
   - nodebrew
-  - pandoc
   - peco
   - phantomjs
   - phantomjs198
-  - q
   - rbenv
   - rbenv-default-gems
   - rbenv-gem-rehash
@@ -60,7 +55,6 @@ homebrew_package_names:
   - tig
   - tree
   - wget
-  - qt
 homebrew_tap_names:
   - homebrew/versions
   - motemen/ghq
