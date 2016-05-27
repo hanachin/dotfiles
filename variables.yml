@@ -6,7 +6,6 @@ dotfiles:
   - .gitattributes
   - .gitconfig
   - .gittemplate
-  - .hgrc
   - .mavenrc
   - .pryrc
   - .tmux.conf
