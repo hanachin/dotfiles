@@ -1,6 +1,5 @@
 dotfiles:
   - .boot2docker/profile
-  - .emacs.d/init.el
 dropbox_dotfiles:
   - .bash_history
   - .coffee_history
