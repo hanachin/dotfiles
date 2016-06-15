@@ -34,3 +34,5 @@
 	program = gpg2
 [commit]
 	gpgsign = true
+[diff]
+	compactionHeuristic = true
