@@ -34,6 +34,7 @@ func _update_vcs_info_msg() {
 
 add-zsh-hook precmd _update_vcs_info_msg
 
+# backgroundが黒
 tori_mane=${FG[226]}
 tori_eye="%(?:${fg[white]} ŏ:${FG[045]}இ )"
 tori_cheek="${FG[202]}"
@@ -42,7 +43,19 @@ tori_body="${FG[230]}"
 tori_tail="${FG[229]}"
 tori_speak="${FG[242]}"
 tori_text="${FG[250]}"
+tori_condition="%(?:${FG[106]}ﾔﾊﾞｲ:${FG[196]}ﾔﾊﾞｲ)"
+
+# backgroundが白っぽい
+tori_mane=${FG[129]}
+tori_eye="%(?:${FG[240]} ŏ:${FG[196]}இ )"
+tori_cheek="${FG[202]}"
+tori_beak="${FG[135]}"
+tori_body="${FG[165]}"
+tori_tail="${FG[164]}"
+tori_speak="${FG[242]}"
+tori_text="${FG[147]}"
 tori_condition="%(?:${FG[120]}ﾔﾊﾞｲ:${FG[196]}ﾔﾊﾞｲ)"
+
 PROMPT="${tori_body}    ${tori_mane}_╰╰,${reset_color}   ${tori_speak}/ﾊﾞｼｮ %#${reset_color} ${tori_text}%~
   ${tori_body}_/${tori_cheek}o${tori_eye}${tori_beak}ｧ${reset_color}  ${tori_speak}/ %1(v:ﾌﾞﾗﾝﾁ:ﾀｲﾁｮｰ)%#${reset_color} %1(v|${FG[245]}%1v |)${tori_condition}${reset_color}
 %{${tori_tail}%}∈%{${reset_color}%}%{${tori_body}%}ミ;ﾉ,ﾉ%{${reset_color}%}   %{${tori_speak}%}＼ｺﾏﾝﾄﾞ%#%{${reset_color}%} "
