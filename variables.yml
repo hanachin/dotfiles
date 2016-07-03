@@ -8,7 +8,6 @@ dropbox_dotfiles:
   - .rediscli_history
   - .ruboty_history
   - .zsh_history
-  - .enhancd
 homebrew_package_names:
   - android-sdk
   - ansible

@@ -40,6 +40,8 @@ resources:
     source: /Users/<%= ENV["USER"] %>/<%= path %>
   <%- end -%>
   - type: command
+    script: ln -nfsv ~/Dropbox/dotfiles/.enhancd ~/.enhancd
+  - type: command
     check_script: "finger -l | grep -E 'Shell: /bin/zsh$'"
     script: sudo chsh -s /bin/zsh <%= ENV["USER"] %>
   - type: command
