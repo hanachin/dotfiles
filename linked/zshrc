@@ -49,11 +49,12 @@ promptori
 # aliases
 alias emacs='emacs -nw'
 alias a='git add'
-alias b='git branch'
+# alias b='git branch'
 alias d='git diff'
 alias dc='git diff --cached'
 alias ds='git diff --staged'
 alias atom='open -a Atom'
+alias b='bundle'
 alias be='bundle exec'
 alias c='git commit'
 alias ci='git commit -S'
