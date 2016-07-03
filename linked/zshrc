@@ -31,7 +31,7 @@ fi
 export PATH=$HOME/bin:$PATH
 
 # variables
-export EDITOR=emacs
+export EDITOR='emacs -nw'
 export GOPATH=$HOME
 
 # zshparam
