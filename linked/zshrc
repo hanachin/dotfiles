@@ -116,3 +116,5 @@ if ! zplug check; then
 fi
 
 zplug load
+
+eval $(docker-machine env)
