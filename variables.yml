@@ -30,6 +30,7 @@ homebrew_package_names:
   - ngrok
   - nkf
   - nodebrew
+  - packer
   - peco
   - phantomjs
   - phantomjs198
@@ -41,6 +42,7 @@ homebrew_package_names:
   - ruby-build
   - terminal-notifier
   - tig
+  - terraform
   - tmux
   - tree
   - wget
