@@ -29,7 +29,8 @@ homebrew_package_names:
   - mysql
   - ngrok
   - nkf
-  - nodebrew
+  - nodenv
+  - node-build
   - packer
   - peco
   - phantomjs
