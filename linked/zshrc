@@ -97,7 +97,7 @@ eval "$(direnv hook zsh)"
 export MONO_GAC_PREFIX="/usr/local"
 
 # Java
-export JAVA_HOME='/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home'
+export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home'
 
 # Android
 export ANDROID_HOME=/usr/local/opt/android-sdk
