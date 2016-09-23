@@ -1,8 +1,10 @@
-# ('x') < my dotfiles
+('x') < my dotfiles
+===================
 
     % env RCRC=$(pwd)/rcrc rcup
 
-## by hand
+by hand
+-------
 
 - [Atom](https://atom.io/)
 - [Chrome](https://www.google.co.jp/chrome/browser/desktop/)
