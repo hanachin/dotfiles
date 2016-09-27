@@ -17,3 +17,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: monospace;
   src: local('OpenDyslexicMono');
 }
+
+/* 🐾 */
+body.post[data-current-user-nickname][data-id][data-turbolinks]
+.container.body
+{
+  font-family: 'Tsukushi B Round Gothic Regular' !important;
+}
