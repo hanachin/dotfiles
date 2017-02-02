@@ -24,3 +24,7 @@ body.post[data-current-user-nickname][data-id][data-turbolinks]
 {
   font-family: 'Tsukushi B Round Gothic Regular' !important;
 }
+
+body.ja .tweet-text {
+  font-family: 'Tsukushi B Round Gothic Regular' !important;
+}
