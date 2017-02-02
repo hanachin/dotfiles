@@ -116,3 +116,14 @@ if ! zplug check; then
 fi
 
 zplug load
+
+yo() {
+  local message=$(cat -)
+  local room=($(nidobata rooms | peco | sed 's#/# #'))
+  if read -q "?Post to $room[1]/$room[2] (y/n) ? "; then
+    echo
+    nidobata post --pre $room[1] $room[2] $message
+  else
+    echo
+  fi
+}
