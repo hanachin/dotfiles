@@ -46,6 +46,7 @@ compinit
 promptori
 
 # aliases
+alias gt='git'
 alias emacs='emacs -nw'
 alias a='git add'
 # alias b='git branch'
