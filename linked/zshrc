@@ -127,3 +127,7 @@ yo() {
     echo
   fi
 }
+
+# less
+export LESS='-R'
+export LESSOPEN='| src-hilite-lesspipe.sh %s'
