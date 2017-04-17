@@ -175,3 +175,8 @@
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 (setq ruby-insert-encoding-magic-comment nil)
+
+(set-face-attribute 'default nil
+                    :family "Ricty"
+                    :height 120)
+;; (setq font-use-system-font t)

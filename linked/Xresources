@@ -1,0 +1,3 @@
+emacs.font: Ricty-14
+UXTerm*VT100*font: 7x14
+XTerm*VT100*font: 7x14
