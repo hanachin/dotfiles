@@ -124,8 +124,9 @@
 
 ;; orgにS-矢印が乗っ取られるのが嫌で設定いじってみた: 麦汁三昧
 ;; http://mugijiru.seesaa.net/article/200967484.html
-(windmove-default-keybindings)
-(setq windmove-wrap-around t)
+;; (windmove-default-keybindings)
+;; (setq windmove-wrap-around t)
+(windmove-default-keybindings 'meta)
 
 ;; C-hでバックスペース
 (global-set-key "\C-h" 'backward-delete-char)
