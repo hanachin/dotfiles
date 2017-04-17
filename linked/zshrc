@@ -101,7 +101,9 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 source ~/.bin/tmuxinator.zsh
 
 # direnv
-eval "$(direnv hook zsh)"
+if which direnv > /dev/null; then
+  eval "$(direnv hook zsh)"
+fi
 
 # TODO: mono
 if which brew > /dev/null; then
