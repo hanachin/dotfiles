@@ -127,13 +127,15 @@ if [ -d /usr/local/opt/zplug ]; then
   source $ZPLUG_HOME/init.zsh
 fi
 
-zplug "b4b4r07/enhancd", use:init.sh
+if which zplug > /dev/null; then
+  zplug "b4b4r07/enhancd", use:init.sh
 
-if ! zplug check; then
-  zplug install
+  if ! zplug check; then
+     zplug install
+  fi
+
+  zplug load
 fi
-
-zplug load
 
 yo() {
   local message=$(cat -)
