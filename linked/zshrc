@@ -1,4 +1,8 @@
-fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
+if which brew > /dev/null; then
+  fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
+elif [ -d /usr/share/zsh/site-functions ]; then
+  fpath=(/usr/share/zsh/site-functions $fpath)
+fi
 fpath=($HOME/.zsh/functions $fpath)
 
 # autoload
@@ -20,8 +24,12 @@ setopt SHARE_HISTORY
 # PATH
 
 ## OSX Apps
-export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
-export PATH=$PATH:~/Applications/calibre.app/Contents/MacOS
+if [ -d /Applications/Postgres.app ]; then
+  export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
+fi
+if [ -d /Applications/calibre.app ]; then
+  export PATH=$PATH:~/Applications/calibre.app/Contents/MacOS
+fi
 
 ## home bin
 if [ ! -d $HOME/bin ]; then
@@ -81,7 +89,9 @@ alias -g REP="RAILS_ENV=production"
 alias -g RET="RAILS_ENV=test"
 
 # rbenv
-export RBENV_ROOT=/usr/local/var/rbenv
+if which brew > /dev/null; then
+  export RBENV_ROOT=/usr/local/var/rbenv
+fi
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # added by travis gem
@@ -93,21 +103,29 @@ source ~/.bin/tmuxinator.zsh
 # direnv
 eval "$(direnv hook zsh)"
 
-# mono
-export MONO_GAC_PREFIX="/usr/local"
+# TODO: mono
+if which brew > /dev/null; then
+  export MONO_GAC_PREFIX="/usr/local"
+fi
 
 # Java
-export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home'
+if [ -d /Library/Java/JavaVirtualMachines ]; then
+  export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home'
+fi
 
 # Android
-export ANDROID_HOME=/usr/local/opt/android-sdk
+if which brew > /dev/null; then
+  export ANDROID_HOME=/usr/local/opt/android-sdk
+fi
 
 # nodenv
 if which nodenv > /dev/null; then eval "$(nodenv init -)"; fi
 
 # zplug
-export ZPLUG_HOME=/usr/local/opt/zplug
-source $ZPLUG_HOME/init.zsh
+if [ -d /usr/local/opt/zplug ]; then
+  export ZPLUG_HOME=/usr/local/opt/zplug
+  source $ZPLUG_HOME/init.zsh
+fi
 
 zplug "b4b4r07/enhancd", use:init.sh
 
