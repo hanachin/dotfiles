@@ -7,12 +7,6 @@
 (require 'cl)
 (defvar installing-package-list
   '(
-    anything
-    anything-complete
-    anything-config
-    anything-match-plugin
-    anything-obsolete
-    anything-show-completion
     auto-complete
     auto-install
     e2wm
@@ -21,15 +15,11 @@
     ruby-mode
     window-layout
     color-theme-solarized
-    helm
-    helm-ls-git
-    helm-rails
     popwin
     multiple-cursors
     smartrep
     markdown-mode
     magit
-    multi-term
     ))
 
 (let ((not-installed (loop for x in installing-package-list
@@ -39,24 +29,6 @@
     (package-refresh-contents)
     (dolist (pkg not-installed)
         (package-install pkg))))
-
-;; anyting
-;; (require 'anything)
-;; (global-set-key (kbd "C-]") 'anything-for-files)
-
-;; helm
-;; (global-set-key (kbd "C-c h") 'helm-mini)
-(global-set-key (kbd "C-]") 'helm-mini)
-(global-set-key (kbd "C-x C-f") 'helm-find-files)
-(global-set-key (kbd "C-x C-d") 'helm-browse-project)
-(require 'helm-rails)
-
-;; (global-set-key (kbd "s-t") 'helm-rails-controllers)
-;; (global-set-key (kbd "s-y") 'helm-rails-models)
-;; (global-set-key (kbd "s-u") 'helm-rails-views)
-;; (global-set-key (kbd "s-o") 'helm-rails-specs)
-(global-set-key (kbd "s-r") 'helm-rails-all)
-;; (global-set-key (kbd "s-g") 'helm-rails-grep-all)
 
 (require 'popwin)
 (popwin-mode 1)
