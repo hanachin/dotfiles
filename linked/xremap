@@ -1,0 +1,30 @@
+window class_only: %w(google-chrome Navigator) do
+  remap 'Alt-Shift-bracketleft', to: 'Ctrl-Shift-Tab'
+  remap 'Alt-Shift-bracketright', to: 'Ctrl-Tab'
+  remap 'Alt-bracketleft', to: 'Alt-Left'
+  remap 'Alt-bracketright', to: 'Alt-Right'
+
+  %w[a z x c v w t f l].each do |key|
+    remap "Alt-#{key}", to: "C-#{key}"
+  end
+
+  remap 'C-b', to: 'Left'
+  remap 'C-f', to: 'Right'
+  remap 'C-p', to: 'Up'
+  remap 'C-n', to: 'Down'
+
+  remap 'M-b', to: 'Ctrl-Left'
+  remap 'M-f', to: 'Ctrl-Right'
+
+  remap 'C-a', to: 'Home'
+  remap 'C-e', to: 'End'
+
+  remap 'C-k', to: ['Shift-End', 'Ctrl-x']
+
+  remap 'C-d', to: 'Delete'
+  remap 'M-d', to: 'Ctrl-Delete'
+end
+
+__END__
+window class_not: %w(emacs urxvt xterm uxterm UXterm gnome-terminal-server Gnome-terminal) do
+end
