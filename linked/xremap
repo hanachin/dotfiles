@@ -4,10 +4,6 @@ window class_only: %w(google-chrome Navigator) do
   remap 'Alt-bracketleft', to: 'Alt-Left'
   remap 'Alt-bracketright', to: 'Alt-Right'
 
-  %w[a z x c v w t f l].each do |key|
-    remap "Alt-#{key}", to: "C-#{key}"
-  end
-
   remap 'C-b', to: 'Left'
   remap 'C-f', to: 'Right'
   remap 'C-p', to: 'Up'
@@ -23,6 +19,10 @@ window class_only: %w(google-chrome Navigator) do
 
   remap 'C-d', to: 'Delete'
   remap 'M-d', to: 'Ctrl-Delete'
+
+  %w[a z x c v w t f l].each do |key|
+    remap "Alt-#{key}", to: "C-#{key}"
+  end
 end
 
 __END__
