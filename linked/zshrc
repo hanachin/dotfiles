@@ -25,7 +25,7 @@ setopt SHARE_HISTORY
 
 ## OSX Apps
 if [ -d /Applications/Postgres.app ]; then
-  export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
+  export PATH="/Applications/Postgres.app/Contents/Versions/9.5/bin:$PATH"
 fi
 if [ -d /Applications/calibre.app ]; then
   export PATH=$PATH:~/Applications/calibre.app/Contents/MacOS
