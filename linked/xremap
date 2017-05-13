@@ -1,4 +1,4 @@
-window class_only: %w(google-chrome Navigator) do
+window class_only: %w(google-chrome Navigator slack) do
   remap 'Alt-Shift-bracketleft', to: 'Ctrl-Shift-Tab'
   remap 'Alt-Shift-bracketright', to: 'Ctrl-Tab'
   remap 'Alt-bracketleft', to: 'Alt-Left'
