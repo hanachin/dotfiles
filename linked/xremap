@@ -20,7 +20,7 @@ window class_only: %w(google-chrome Navigator slack) do
   remap 'C-d', to: 'Delete'
   remap 'M-d', to: 'Ctrl-Delete'
 
-  %w[a z x c v w t f l].each do |key|
+  %w[a z x c v w t f l r].each do |key|
     remap "Alt-#{key}", to: "C-#{key}"
   end
 end
