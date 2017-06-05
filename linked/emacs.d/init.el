@@ -13,6 +13,7 @@
     popup
     ruby-end
     ruby-mode
+    inf-ruby
     window-layout
     color-theme-solarized
     popwin
