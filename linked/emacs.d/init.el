@@ -156,3 +156,6 @@
                     :family "Ricty"
                     :height 120)
 ;; (setq font-use-system-font t)
+
+
+(setq x-alt-keysym 'meta)
