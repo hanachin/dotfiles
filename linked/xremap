@@ -4,23 +4,11 @@ window class_only: %w(google-chrome Navigator slack) do
   remap 'Alt-bracketleft', to: 'Alt-Left'
   remap 'Alt-bracketright', to: 'Alt-Right'
 
-  remap 'C-b', to: 'Left'
-  remap 'C-f', to: 'Right'
-  remap 'C-p', to: 'Up'
-  remap 'C-n', to: 'Down'
-
-  remap 'M-b', to: 'Ctrl-Left'
-  remap 'M-f', to: 'Ctrl-Right'
-
-  remap 'C-a', to: 'Home'
-  remap 'C-e', to: 'End'
+  remap 'Alt-f', to: 'Ctrl-Right'
 
   remap 'C-k', to: ['Shift-End', 'Ctrl-x']
 
-  remap 'C-d', to: 'Delete'
-  remap 'M-d', to: 'Ctrl-Delete'
-
-  %w[a z x c v w t f l r].each do |key|
+  %w[a z x c v w t l r].each do |key|
     remap "Alt-#{key}", to: "C-#{key}"
   end
 end
