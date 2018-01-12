@@ -172,3 +172,7 @@ fi
 if [ -d /Applications/FirefoxESR.app/Contents/MacOS ]; then
   export SLIMERJSLAUNCHER=/Applications/FirefoxESR.app/Contents/MacOS/firefox
 fi
+
+if [ -d /usr/local/opt/qt/bin ]; then
+  export PATH="/usr/local/opt/qt/bin:$PATH"
+fi
