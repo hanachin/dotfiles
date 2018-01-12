@@ -55,6 +55,7 @@ compinit
 promptori
 
 # aliases
+alias l='ls'
 alias gt='git'
 alias emacs='emacs -nw'
 alias a='git add'
