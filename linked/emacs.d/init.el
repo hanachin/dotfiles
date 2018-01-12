@@ -21,6 +21,7 @@
     smartrep
     markdown-mode
     magit
+    sass-mode
     ))
 
 (let ((not-installed (loop for x in installing-package-list
