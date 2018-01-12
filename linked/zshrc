@@ -158,3 +158,5 @@ export LESSOPEN='| src-hilite-lesspipe.sh %s'
 export LANG="ja_JP.UTF-8"
 
 alias gsed=sed
+
+export GOBY_ROOT=$GOPATH/src/github.com/goby-lang/goby
