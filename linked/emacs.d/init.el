@@ -21,6 +21,7 @@
     smartrep
     markdown-mode
     magit
+    rjsx-mode
     sass-mode
     ))
 
