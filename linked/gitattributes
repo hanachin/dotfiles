@@ -8,4 +8,3 @@
 *.pl    diff=perl
 *.py    diff=python
 *.rb    diff=ruby
-Gemfile.lock merge=gemfilelock
