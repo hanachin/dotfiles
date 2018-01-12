@@ -19,6 +19,7 @@
 	templatedir = /Users/sei/.gittemplate
 [alias]
   delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
+  zenkesi = clean -fd
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
