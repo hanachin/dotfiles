@@ -85,6 +85,7 @@ alias raked='RAILS_ENV=development bundle exec rake'
 alias rakep='RAILS_ENV=production bundle exec rake'
 alias raket='RAILS_ENV=test bundle exec rake'
 alias s='git status'
+alias ti='tig'
 
 alias -g RED="RAILS_ENV=development"
 alias -g REP="RAILS_ENV=production"
