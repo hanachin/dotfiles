@@ -176,3 +176,21 @@ fi
 if [ -d /usr/local/opt/qt/bin ]; then
   export PATH="/usr/local/opt/qt/bin:$PATH"
 fi
+
+if [ -d ~/google-cloud-sdk ]; then
+  export PATH=$PATH:~/google-cloud-sdk/bin
+fi
+
+# opam
+if [ -d ~/local/bin ]; then
+  export PATH=$PATH:~/local/bin
+fi
+
+# ESP32
+if [ -d ~/esp/xtensa-esp32-elf/ ]; then
+  export PATH=$PATH:~/esp/xtensa-esp32-elf/bin
+fi
+
+if [ -d ~/esp/esp-idf ]; then
+  export IDF_PATH=~/esp/esp-idf
+fi
