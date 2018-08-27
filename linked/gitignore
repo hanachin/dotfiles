@@ -64,3 +64,5 @@ tramp
 
 node_modules
 .bundle
+
+TAGS
