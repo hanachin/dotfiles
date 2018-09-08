@@ -1,11 +1,10 @@
 ;; Emacsの設定をやり直した！ - (define -ayalog '()) http://ayato.hateblo.jp/entry/20140112/1389533972
 (require 'package)
 (add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
-
 (package-initialize)
 
-(require 'cl)
-(defvar installing-package-list
+;; http://emacs-jp.github.io/packages/package-management/package-el.html
+(defvar my/favorite-packages
   '(
     auto-complete
     auto-install
@@ -25,12 +24,13 @@
     sass-mode
     ))
 
-(let ((not-installed (loop for x in installing-package-list
-                            when (not (package-installed-p x))
-                            collect x)))
-  (when not-installed
+(require 'cl-lib)
+(let ((packages (cl-loop for pkg in my/favorite-packages
+                            when (not (package-installed-p pkg))
+                            collect pkg)))
+  (when packages
     (package-refresh-contents)
-    (dolist (pkg not-installed)
+    (dolist (pkg packages)
         (package-install pkg))))
 
 (require 'popwin)
