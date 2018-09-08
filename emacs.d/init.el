@@ -7,7 +7,6 @@
 (defvar my/favorite-packages
   '(
     auto-complete
-    auto-install
     e2wm
     popup
     ruby-end
