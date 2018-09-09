@@ -55,22 +55,9 @@
 (setq undo-limit 800000)
 (setq undo-strong-limit 1200000)
 
-;; バックアップファイルを.bakに集約
-;; バックアップファイルについての設定
-;; http://exlight.net/devel/emacs/backup_file/index.html
-(setq make-backup-files t)
-(setq backup-directory "~/.bak")
-(if (and (boundp 'backup-directory)
-         (not (fboundp 'make-backup-file-name-original)))
-    (progn
-      (fset 'make-backup-file-name-original
-            (symbol-function 'make-backup-file-name))
-      (defun make-backup-file-name (filename)
-        (if (and (file-exists-p (expand-file-name backup-directory))
-                 (file-directory-p (expand-file-name backup-directory)))
-            (concat (expand-file-name backup-directory)
-                    "/" (file-name-nondirectory filename))
-          (make-backup-file-name-original filename)))))
+;; ~/.emacs.d/backupsにバックアップファイルを集約
+;; https://www.emacswiki.org/emacs/AutoSave
+(setq backup-directory-alist `(("." . ,(concat user-emacs-directory "backups"))))
 
 ;; ファイルの削除でゴミ箱に入れる。ディレクトリの削除で問題が出たら以下参照。
 ;; problem in `delete-directory` with enabled `delete-by-removing-to-trash` - Stack Overflow
