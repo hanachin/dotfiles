@@ -7,7 +7,6 @@
 (defvar my/favorite-packages
   '(
     auto-complete
-    e2wm
     popup
     ruby-end
     inf-ruby
