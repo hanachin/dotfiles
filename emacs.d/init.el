@@ -13,7 +13,6 @@
     ruby-mode
     inf-ruby
     window-layout
-    color-theme-solarized
     popwin
     multiple-cursors
     smartrep
