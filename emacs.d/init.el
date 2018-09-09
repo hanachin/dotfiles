@@ -14,7 +14,6 @@
     window-layout
     popwin
     multiple-cursors
-    smartrep
     magit
     ))
 
