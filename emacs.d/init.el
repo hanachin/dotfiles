@@ -17,7 +17,6 @@
     smartrep
     markdown-mode
     magit
-    rjsx-mode
     ))
 
 (require 'cl-lib)
@@ -171,8 +170,3 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-
-(add-to-list 'auto-mode-alist '(".*\\.js\\'" . rjsx-mode))
-(add-hook 'js2-mode-hook
-          (lambda ()
-            (setq js2-basic-offset 2)))
