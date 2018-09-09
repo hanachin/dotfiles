@@ -11,7 +11,6 @@
     popup
     ruby-end
     inf-ruby
-    window-layout
     popwin
     multiple-cursors
     magit
