@@ -15,7 +15,6 @@
     popwin
     multiple-cursors
     smartrep
-    markdown-mode
     magit
     ))
 
