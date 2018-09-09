@@ -10,7 +10,6 @@
     e2wm
     popup
     ruby-end
-    ruby-mode
     inf-ruby
     window-layout
     popwin
