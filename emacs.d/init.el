@@ -7,12 +7,12 @@
 (defvar my/favorite-packages
   '(
     auto-complete
-    popup
-    ruby-end
     inf-ruby
-    popwin
-    multiple-cursors
     magit
+    multiple-cursors
+    popup
+    popwin
+    ruby-end
     ))
 
 (require 'cl-lib)
