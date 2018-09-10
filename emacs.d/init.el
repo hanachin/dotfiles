@@ -85,16 +85,16 @@
 
 (add-hook 'kill-buffer-query-functions
           ;; *scratch* バッファで kill-buffer したら内容を消去するだけにする
-          #'(lambda ()
-              (if (string= "*scratch*" (buffer-name))
-                  (progn (my/make-scratch 0) nil)
-                t)))
+          (lambda ()
+            (if (string= "*scratch*" (buffer-name))
+                (progn (my/make-scratch 0) nil)
+              t)))
 
 (add-hook 'after-save-hook
           ;; *scratch* バッファの内容を保存したら *scratch* バッファを新しく作る
-          #'(lambda ()
-              (unless (member "*scratch*" (my/buffer-name-list))
-                (my/make-scratch 1))))
+          (lambda ()
+            (unless (member "*scratch*" (my/buffer-name-list))
+              (my/make-scratch 1))))
 
 ;; Emacsの基本設定: 麦汁三昧
 ;; http://mugijiru.seesaa.net/article/203900890.html#
