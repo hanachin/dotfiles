@@ -64,37 +64,30 @@
 ;; http://stackoverflow.com/questions/2583541/problem-in-delete-directory-with-enabled-delete-by-removing-to-trash
 (setq delete-by-moving-to-trash t)
 
-;; Meadow/Emacs memo: ウィンドウ/バッファの操作
-;; http://www.bookshelf.jp/soft/meadow_29.html
-(defun my/make-scratch (&optional arg)
-  (interactive)
-  (progn
-    ;; "*scratch*" を作成して buffer-list に放り込む
-    (set-buffer (get-buffer-create "*scratch*"))
-    (funcall initial-major-mode)
-    (erase-buffer)
-    (when (and initial-scratch-message (not inhibit-startup-message))
-      (insert initial-scratch-message))
-    (or arg (progn (setq arg 0)
-                   (switch-to-buffer "*scratch*")))
-    (cond ((= arg 0) (message "*scratch* is cleared up."))
-          ((= arg 1) (message "another *scratch* is created")))))
+;; copy from https://www.emacswiki.org/emacs/RecreateScratchBuffer
+;;
+;; If the *scratch* buffer is killed, recreate it automatically
+;; FROM: Morten Welind
+;;http://www.geocrawler.com/archives/3/338/1994/6/0/1877802/
+(save-excursion
+  (set-buffer (get-buffer-create "*scratch*"))
+  (lisp-interaction-mode)
+  (make-local-variable 'kill-buffer-query-functions)
+  (add-hook 'kill-buffer-query-functions 'kill-scratch-buffer))
 
-(defun my/buffer-name-list ()
-  (mapcar #'buffer-name (buffer-list)))
-
-(add-hook 'kill-buffer-query-functions
-          ;; *scratch* バッファで kill-buffer したら内容を消去するだけにする
-          (lambda ()
-            (if (string= "*scratch*" (buffer-name))
-                (progn (my/make-scratch 0) nil)
-              t)))
-
-(add-hook 'after-save-hook
-          ;; *scratch* バッファの内容を保存したら *scratch* バッファを新しく作る
-          (lambda ()
-            (unless (member "*scratch*" (my/buffer-name-list))
-              (my/make-scratch 1))))
+(defun kill-scratch-buffer ()
+  ;; The next line is just in case someone calls this manually
+  (set-buffer (get-buffer-create "*scratch*"))
+  ;; Kill the current (*scratch*) buffer
+  (remove-hook 'kill-buffer-query-functions 'kill-scratch-buffer)
+  (kill-buffer (current-buffer))
+  ;; Make a brand new *scratch* buffer
+  (set-buffer (get-buffer-create "*scratch*"))
+  (lisp-interaction-mode)
+  (make-local-variable 'kill-buffer-query-functions)
+  (add-hook 'kill-buffer-query-functions 'kill-scratch-buffer)
+  ;; Since we killed it, don't let caller do that.
+  nil)
 
 ;; Emacsの基本設定: 麦汁三昧
 ;; http://mugijiru.seesaa.net/article/203900890.html#
