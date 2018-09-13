@@ -13,8 +13,6 @@
 	default = simple
 [ghq]
   root = ~/src
-[init]
-	templatedir = /Users/sei/.gittemplate
 [alias]
   delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
   zenkesi = clean -fd
