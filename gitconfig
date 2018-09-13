@@ -22,6 +22,7 @@
 	smudge = git-lfs smudge -- %f
 [commit]
 	gpgsign = true
+	cleanup = scissors
 [diff]
 	compactionHeuristic = true
 [include]
