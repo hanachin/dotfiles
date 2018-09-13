@@ -96,6 +96,7 @@ if which brew > /dev/null; then
   export RBENV_ROOT=/usr/local/var/rbenv
 fi
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+if [ -x ~/.rbenv/bin/rbenv ]; then eval "$(~/.rbenv/bin/rbenv init -)"; fi
 
 # added by travis gem
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
