@@ -7,8 +7,6 @@
 	excludesfile = ~/.gitignore
 	attributesfile = ~/.gitattributes
 	precomposeunicode = true
-[hub]
-	protocol = https
 [merge]
 	ff = true
 [push]
