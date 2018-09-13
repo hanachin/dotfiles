@@ -1,0 +1,16 @@
+# https://github.com/k0kubun/dotfiles/blob/fbeabd3bbfe161d2285af66ae8a868569daed808/cookbooks/xremap/templates/xremap.service
+# 1. Copy this to ~/.config/systemd/user/xremap.service
+# 2. systemctl --user enable xremap
+
+[Unit]
+Description=xremap
+
+[Service]
+KillMode=process
+ExecStart=/usr/local/bin/xremap /home/sei/.xremap
+ExecStop=/usr/bin/killall xremap
+Restart=always
+Environment=DISPLAY=:0
+
+[Install]
+WantedBy=default.target
