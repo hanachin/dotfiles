@@ -195,3 +195,7 @@ fi
 if [ -d ~/esp/esp-idf ]; then
   export IDF_PATH=~/esp/esp-idf
 fi
+
+if [ -d ~/.cargo/bin ]; then
+  export PATH="$HOME/.cargo/bin:$PATH"
+fi
