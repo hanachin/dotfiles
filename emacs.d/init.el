@@ -13,6 +13,7 @@
     popup
     popwin
     racer
+    robe
     ruby-end
     rust-mode
     yaml-mode
@@ -121,6 +122,10 @@
              '("\\(Capfile\\|Gemfile\\(?:\\.[a-zA-Z0-9._-]+\\)?\\|[rR]akefile\\)\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist
              '("\\.haml_i18n_lint" . ruby-mode))
+
+;; robe
+(add-hook 'ruby-mode-hook 'robe-mode)
+(add-hook 'robe-mode-hook 'ac-robe-setup)
 
 ;; whitespace
 (setq-default show-trailing-whitespace t)
