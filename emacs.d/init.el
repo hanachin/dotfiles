@@ -14,6 +14,7 @@
     popwin
     ruby-end
     rust-mode
+    yaml-mode
     ))
 
 (require 'cl-lib)
