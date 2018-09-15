@@ -135,3 +135,6 @@
 
 
 (setq x-alt-keysym 'meta)
+
+(add-hook 'rust-mode-hook #'racer-mode)
+(add-hook 'racer-mode-hook #'eldoc-mode)
