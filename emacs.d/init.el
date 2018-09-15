@@ -12,6 +12,7 @@
     multiple-cursors
     popup
     popwin
+    racer
     ruby-end
     rust-mode
     yaml-mode
