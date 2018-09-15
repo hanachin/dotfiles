@@ -13,6 +13,7 @@
     popup
     popwin
     ruby-end
+    rust-mode
     ))
 
 (require 'cl-lib)
