@@ -201,3 +201,8 @@ if [ -d ~/.cargo/bin ]; then
   # racer
   export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 fi
+
+if [ -d ~/.opam ]; then
+   # OPAM configuration
+   . /home/sei/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+fi
