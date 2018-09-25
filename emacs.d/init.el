@@ -143,3 +143,13 @@
 
 (add-hook 'rust-mode-hook #'racer-mode)
 (add-hook 'racer-mode-hook #'eldoc-mode)
+
+;; satysfi
+(add-to-list 'load-path "~/src/github.com/gfngfn/satysfi.el" t)
+(require 'satysfi)
+(add-to-list 'auto-mode-alist '("\\.saty$" . satysfi-mode))
+(add-to-list 'auto-mode-alist '("\\.satyh$" . satysfi-mode))
+(when (equal system-type 'gnu/linux)
+  (setq satysfi-command "~/.opam/4.06.0/bin/satysfi"))
+(when (equal system-type 'gnu/linux)
+  (setq satysfi-pdf-viewer-command "gio open"))
