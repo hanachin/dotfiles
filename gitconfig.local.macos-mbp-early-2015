@@ -1,0 +1,5 @@
+[user]
+	signingkey = BE0B6E3B
+
+[credential]
+	helper = /usr/local/bin/git-credential-osxkeychain
