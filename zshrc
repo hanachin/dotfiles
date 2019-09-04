@@ -208,3 +208,10 @@ if [ -d ~/.opam ]; then
 fi
 
 export GPG_TTY=$(tty)
+
+if [ -d /usr/local/opt ]; then
+  export PATH="/usr/local/opt/mysql-client/bin:$PATH"
+  export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
+  export PATH="/usr/local/opt/mysql-client/bin:$PATH"
+  export PATH="/usr/local/opt/openssl/bin:$PATH"
+fi
