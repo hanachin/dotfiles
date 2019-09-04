@@ -13,6 +13,7 @@
 	default = simple
 [ghq]
   root = ~/src
+  user = hanachin
 [alias]
   delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
   zenkesi = clean -fd
