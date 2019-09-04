@@ -62,21 +62,21 @@ font:
   # The normal (roman) font face to use.
   normal:
     # family: monospace # should be "Menlo" or something on macOS.
-    family: "Courier New" # should be "Menlo" or something on macOS.
+    family: "Source Han Mono" # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     # style: Regular
 
   # The bold font face
   bold:
     # family: monospace # should be "Menlo" or something on macOS.
-    family: "Courier New" # should be "Menlo" or something on macOS.
+    family: "Source Han Mono" # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     # style: Bold
 
   # The italic font face
   italic:
     # family: monospace # should be "Menlo" or something on macOS.
-    family: "Courier New" # should be "Menlo" or something on macOS.
+    family: "Source Han Mono" # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     # style: Italic
 
