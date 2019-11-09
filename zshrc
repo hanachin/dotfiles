@@ -129,6 +129,10 @@ fi
 
 # nodenv
 if which nodenv > /dev/null; then eval "$(nodenv init -)"; fi
+if [ -x ~/.nodenv/bin/nodenv ]; then
+  eval "$(~/.nodenv/bin/nodenv init -)"
+  export PATH="$HOME/.nodenv/bin:$PATH"
+fi
 
 # zplug
 if [ -d /usr/local/opt/zplug ]; then
