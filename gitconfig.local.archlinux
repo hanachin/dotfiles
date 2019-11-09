@@ -1,4 +1,4 @@
 [user]
-	signingkey = 55BB71DA
+	signingkey = 822FDAEB0ECE633F
 [credential]
 	helper = /usr/share/git/credential/gnome-keyring/git-credential-gnome-keyring
