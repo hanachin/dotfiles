@@ -222,3 +222,6 @@ if [ -d /usr/local/opt ]; then
   export PATH="/usr/local/opt/mysql-client/bin:$PATH"
   export PATH="/usr/local/opt/openssl/bin:$PATH"
 fi
+
+# export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
+[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
