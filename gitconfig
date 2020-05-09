@@ -24,7 +24,6 @@
 	process = git-lfs filter-process
 [commit]
 	gpgsign = true
-	cleanup = scissors
 [diff]
 	compactionHeuristic = true
 [include]
