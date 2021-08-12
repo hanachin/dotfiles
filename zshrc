@@ -224,4 +224,6 @@ if [ -d /usr/local/opt ]; then
 fi
 
 # export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
-[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
+if [ -f /opt/miniconda3/etc/profile.d/conda.sh ]; then
+  source /opt/miniconda3/etc/profile.d/conda.sh
+fi
