@@ -227,3 +227,9 @@ fi
 if [ -f /opt/miniconda3/etc/profile.d/conda.sh ]; then
   source /opt/miniconda3/etc/profile.d/conda.sh
 fi
+
+if [ -n "$(uname -a | grep Nix)" ]; then
+  export GPG_TTY="$(tty)"
+  gpg-connect-agent /bye
+  export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+fi
