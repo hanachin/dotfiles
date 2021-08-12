@@ -1,0 +1,3 @@
+if [ -f /etc/profiles/per-user/sei/share/nix-direnv/direnvrc ]; then
+  source /etc/profiles/per-user/sei/share/nix-direnv/direnvrc
+fi
