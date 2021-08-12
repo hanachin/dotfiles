@@ -68,3 +68,5 @@ node_modules
 TAGS
 
 .netlify
+
+docker-compose.override.yml
