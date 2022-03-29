@@ -1,5 +1,5 @@
 [user]
-        signingkey = 20A110123ABE347B
+        signingkey = 21460F028224C970
 
 [credential "https://github.com"]
 	helper = /etc/profiles/per-user/sei/bin/gh auth git-credential
