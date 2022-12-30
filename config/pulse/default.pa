@@ -1,0 +1,29 @@
+.include /etc/pulse/default.pa
+
+.nofail
+unload-module module-suspend-on-idle
+.fail
+
+# set-card-profile alsa_card.usb-Burr-Brown_from_TI_USB_Audio_CODEC-00 output:iec958-stereo
+# set-card-profile alsa_card.usb-Burr-Brown_from_TI_USB_Audio_CODEC-00 input:iec958-stereo
+
+# load-module module-remap-source source_name=q2u_mono source_properties="device.description='Q2U\ Mono'" master=alsa_input.usb-Burr-Brown_from_TI_USB_Audio_CODEC-00.iec958-stereo master_channel_map=left channel_map=mono
+# load-module module-echo-cancel source_name=q2u source_properties="device.description='Q2U'" source_master=q2u_mono use_master_format=1 aec_method=webrtc aec_args="analog_gain_control=0\ digital_gain_control=0"
+# set-default-source q2u
+
+# load-module module-remap-source source_name=q2u_mono source_properties="device.description='Q2U\ Mono'" master=alsa_input.hw_0_0 master_channel_map=left channel_map=mono
+# load-module module-echo-cancel source_name=q2u source_properties="device.description='Q2U'" source_master=q2u_mono use_master_format=1 aec_method=webrtc aec_args="analog_gain_control=0\ digital_gain_control=0"
+# set-default-source q2u
+
+# load-module module-null-sink sink_name=mic_denoised_out rate=44100
+# load-module module-ladspa-sink sink_name=mic_raw_in sink_master=mic_denoised_out label=noise_suppressor_mono plugin=/usr/lib/ladspa/librnnoise_ladspa.so control=95
+# load-module module-loopback source=q2u_mono sink=mic_raw_in channels=1 source_dont_move=true sink_dont_move=true
+
+# load-module module-remap-source source_name=denoised source_properties="device.description='Q2U'" master=mic_denoised_out.monitor channels=1
+# set-default-source denoised
+
+# load-module module-null-sink sink_name=momotetsu rate=44100
+# load-module module-loopback source=q2u_mono sink=momotetsu channels=1 source_dont_move=true sink_dont_move=true
+# load-module module-loopback source=alsa_input.usb-MACROSILICON_USB_Video-02.analog-stereo sink=momotetsu source_dont_move=true sink_dont_move=true
+# load-module module-loopback source=alsa_input.usb-MACROSILICON_USB_Video-02.analog-stereo sink=alsa_output.pci-0000_0c_00.4.analog-stereo source_dont_move=true sink_dont_move=true
+# load-module module-remap-source source_name=momotetsu_monitor source_properties="device.description='🍑🚂'" master=momotetsu.monitor channels=1

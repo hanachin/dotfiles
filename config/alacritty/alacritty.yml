@@ -29,13 +29,15 @@ window:
     x: 2
     y: 2
 
+  dynamic_title: true
+
   # Window decorations
   # Setting this to false will result in window without borders and title bar.
   decorations: none
   # decorations: full
 
   # Background opacity
-  opacity: 1.0
+  opacity: 0.8
 
 # When true, bold text is drawn using the bright variant of colors.
 draw_bold_text_with_bright_colors: true
@@ -106,42 +108,133 @@ font:
   # OS X only: use thin stroke font rendering. Thin strokes are suitable
   # for retina displays, but for non-retina you probably want this set to
   # false.
-  use_thin_strokes: true
 
 # Should display the render timer
 debug:
   render_timer: false
 
+schemes:
+  # Tokyo Night theme, based on both:
+  #   https://github.com/ghifarit53/tokyonight-vim
+  #   https://github.com/enkia/tokyo-night-vscode-theme
+  tokyo-night: &tokyo-night
+    # Default colors
+    primary:
+      background: '0x1a1b26'
+      foreground: '0xa9b1d6'
+
+    # Normal colors
+    normal:
+      black:   '0x32344a'
+      red:     '0xf7768e'
+      green:   '0x9ece6a'
+      yellow:  '0xe0af68'
+      blue:    '0x7aa2f7'
+      magenta: '0xad8ee6'
+      cyan:    '0x449dab'
+      white:   '0x787c99'
+
+    # Bright colors
+    bright:
+      black:   '0x444b6a'
+      red:     '0xff7a93'
+      green:   '0xb9f27c'
+      yellow:  '0xff9e64'
+      blue:    '0x7da6ff'
+      magenta: '0xbb9af7'
+      cyan:    '0x0db9d7'
+      white:   '0xacb0d0'
+
+  tokyo-night-storm: &tokyo-night-storm
+    # Default colors
+    primary:
+      background: '0x24283b'
+      foreground: '0xa9b1d6'
+
+    # Normal colors
+    normal:
+      black:   '0x32344a'
+      red:     '0xf7768e'
+      green:   '0x9ece6a'
+      yellow:  '0xe0af68'
+      blue:    '0x7aa2f7'
+      magenta: '0xad8ee6'
+      cyan:    '0x449dab'
+      white:   '0x9699a8'
+
+    # Bright colors
+    bright:
+      black:   '0x444b6a'
+      red:     '0xff7a93'
+      green:   '0xb9f27c'
+      yellow:  '0xff9e64'
+      blue:    '0x7da6ff'
+      magenta: '0xbb9af7'
+      cyan:    '0x0db9d7'
+      white:   '0xacb0d0'
 # Use custom cursor colors. If true, display the cursor in the cursor.foreground
 # and cursor.background colors, otherwise invert the colors of the cursor.
 # custom_cursor_colors: false
-colors:
-  # Default colors
-  primary:
-    background: '0xfdf6e3'
-    foreground: '0x586e75'
+colors: *tokyo-night-storm
+# colors:
+#   # Default colors
+#   primary:
+#     background: '0xfdf6e3'
+#     foreground: '0x586e75'
 
-  # Normal colors
-  normal:
-    black:   '0xeee8d5'
-    red:     '0xdc322f'
-    green:   '0x859900'
-    yellow:  '0xb58900'
-    blue:    '0x268bd2'
-    magenta: '0xd33682'
-    cyan:    '0x2aa198'
-    white:   '0x073642'
+#   # Normal colors
+#   normal:
+#     black:   '0xeee8d5'
+#     red:     '0xdc322f'
+#     green:   '0x859900'
+#     yellow:  '0xb58900'
+#     blue:    '0x268bd2'
+#     magenta: '0xd33682'
+#     cyan:    '0x2aa198'
+#     white:   '0x073642'
 
-  # Bright colors
-  bright:
-    black:   '0xfdf6e3'
-    red:     '0xcb4b16'
-    green:   '0x93a1a1'
-    yellow:  '0x839496'
-    blue:    '0x657b83'
-    magenta: '0x6c71c4'
-    cyan:    '0x586e75'
-    white:   '0x002b36'
+#   # Bright colors
+#   bright:
+#     black:   '0xfdf6e3'
+#     red:     '0xcb4b16'
+#     green:   '0x93a1a1'
+#     yellow:  '0x839496'
+#     blue:    '0x657b83'
+#     magenta: '0x6c71c4'
+#     cyan:    '0x586e75'
+#     white:   '0x002b36'
+# # Colors (PaperColor - Light)
+# colors:
+#   # Default colors
+#   primary:
+#     background: '0xeeeeee'
+#     foreground: '0x878787'
+
+#   cursor:
+#     text: '0xeeeeee'
+#     cursor: '0x878787'
+
+#   # Normal colors
+#   normal:
+#     black:   '0xeeeeee'
+#     red:     '0xaf0000'
+#     green:   '0x008700'
+#     yellow:  '0x5f8700'
+#     blue:    '0x0087af'
+#     magenta: '0x878787'
+#     cyan:    '0x005f87'
+#     white:   '0x444444'
+
+#   # Bright colors
+#   bright:
+#     black:   '0xbcbcbc'
+#     red:     '0xd70000'
+#     green:   '0xd70087'
+#     yellow:  '0x8700af'
+#     blue:    '0xd75f00'
+#     magenta: '0xd75f00'
+#     cyan:    '0x005faf'
+#     white:   '0x005f87'
 # Visual Bell
 #
 # Any time the BEL code is received, Alacritty "rings" the visual bell. Once
@@ -164,7 +257,7 @@ colors:
 #
 # To completely disable the visual bell, set its duration to 0.
 #
-visual_bell:
+bell:
   animation: EaseOutExpo
   duration: 0
 
@@ -207,8 +300,6 @@ mouse:
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
-
-dynamic_title: true
 
 hide_when_typing: false
 

@@ -195,13 +195,7 @@ if [ -d ~/local/bin ]; then
 fi
 
 # ESP32
-if [ -d ~/esp/xtensa-esp32-elf/ ]; then
-  export PATH=$PATH:~/esp/xtensa-esp32-elf/bin
-fi
-
-if [ -d ~/esp/esp-idf ]; then
-  export IDF_PATH=~/esp/esp-idf
-fi
+alias get_idf='source $HOME/src/github.com/espressif/esp-idf/export.sh'
 
 if [ -d ~/.cargo/bin ]; then
   export PATH="$HOME/.cargo/bin:$PATH"
