@@ -112,36 +112,34 @@ font:
 debug:
   render_timer: false
 
-# Use custom cursor colors. If true, display the cursor in the cursor.foreground
-# and cursor.background colors, otherwise invert the colors of the cursor.
-# custom_cursor_colors: false
+# Colors (Everforest Dark)
 colors:
   # Default colors
   primary:
-    background: '0xfdf6e3'
-    foreground: '0x586e75'
+    background: '0x2d353b'
+    foreground: '0xd3c6aa'
 
   # Normal colors
   normal:
-    black:   '0xeee8d5'
-    red:     '0xdc322f'
-    green:   '0x859900'
-    yellow:  '0xb58900'
-    blue:    '0x268bd2'
-    magenta: '0xd33682'
-    cyan:    '0x2aa198'
-    white:   '0x073642'
+    black:   '0x475258'
+    red:     '0xe67e80'
+    green:   '0xa7c080'
+    yellow:  '0xdbbc7f'
+    blue:    '0x7fbbb3'
+    magenta: '0xd699b6'
+    cyan:    '0x83c092'
+    white:   '0xd3c6aa'
 
   # Bright colors
   bright:
-    black:   '0xfdf6e3'
-    red:     '0xcb4b16'
-    green:   '0x93a1a1'
-    yellow:  '0x839496'
-    blue:    '0x657b83'
-    magenta: '0x6c71c4'
-    cyan:    '0x586e75'
-    white:   '0x002b36'
+    black:   '0x475258'
+    red:     '0xe67e80'
+    green:   '0xa7c080'
+    yellow:  '0xdbbc7f'
+    blue:    '0x7fbbb3'
+    magenta: '0xd699b6'
+    cyan:    '0x83c092'
+    white:   '0xd3c6aa'
 # Visual Bell
 #
 # Any time the BEL code is received, Alacritty "rings" the visual bell. Once
