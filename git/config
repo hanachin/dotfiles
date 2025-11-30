@@ -1,9 +1,6 @@
 [user]
 	name = Seiei Miyagi
 	email = hanachin@gmail.com
-[core]
-	excludesfile = ~/.gitignore
-	attributesfile = ~/.gitattributes
 [merge]
 	ff = true
 [ghq]
@@ -18,6 +15,6 @@
 [commit]
 	gpgsign = true
 [include]
-	path = ~/.gitconfig.local
+	path = ~/.git/config.local
 [github]
 	user = hanachin
