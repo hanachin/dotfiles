@@ -16,5 +16,7 @@
 	gpgsign = true
 [include]
 	path = ~/.git/config.local
+[init]
+	defaultBranch = main
 [github]
 	user = hanachin
