@@ -23,15 +23,6 @@ setopt SHARE_HISTORY
 
 # PATH
 
-## OSX Apps
-if [ -d /Applications/Postgres.app ]; then
-  export PATH="/Applications/Postgres.app/Contents/Versions/9.5/bin:$PATH"
-  export PGHOST=localhost
-fi
-if [ -d /Applications/calibre.app ]; then
-  export PATH=$PATH:~/Applications/calibre.app/Contents/MacOS
-fi
-
 ## home bin
 if [ ! -d $HOME/bin ]; then
   mkdir $HOME/bin
