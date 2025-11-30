@@ -31,7 +31,6 @@ export PATH=$HOME/bin:$PATH
 
 # variables
 export EDITOR='emacs -nw'
-export GOPATH=$HOME
 
 # zshparam
 HISTFILE=~/.zsh_history
@@ -82,47 +81,12 @@ alias -g RED="RAILS_ENV=development"
 alias -g REP="RAILS_ENV=production"
 alias -g RET="RAILS_ENV=test"
 
-# rbenv
-if which brew > /dev/null; then
-  export RBENV_ROOT=/usr/local/var/rbenv
-fi
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-if [ -x ~/.rbenv/bin/rbenv ]; then
-  eval "$(~/.rbenv/bin/rbenv init -)"
-  export PATH="$HOME/.rbenv/bin:$PATH"
-fi
-
-# added by travis gem
-[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
-
 # tmuxinator
 source ~/.bin/tmuxinator.zsh
 
 # direnv
 if which direnv > /dev/null; then
   eval "$(direnv hook zsh)"
-fi
-
-# TODO: mono
-if which brew > /dev/null; then
-  export MONO_GAC_PREFIX="/usr/local"
-fi
-
-# Java
-if [ -d /Library/Java/JavaVirtualMachines ]; then
-  export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home'
-fi
-
-# Android
-if which brew > /dev/null; then
-  export ANDROID_HOME=/usr/local/opt/android-sdk
-fi
-
-# nodenv
-if which nodenv > /dev/null; then eval "$(nodenv init -)"; fi
-if [ -x ~/.nodenv/bin/nodenv ]; then
-  eval "$(~/.nodenv/bin/nodenv init -)"
-  export PATH="$HOME/.nodenv/bin:$PATH"
 fi
 
 # zplug
@@ -141,83 +105,11 @@ if which zplug > /dev/null; then
   zplug load
 fi
 
-yo() {
-  local message=$(cat -)
-  local room=($(nidobata rooms | peco | sed 's#/# #'))
-  if read -q "?Post to $room[1]/$room[2] (y/n) ? "; then
-    echo
-    nidobata post --pre $room[1] $room[2] $message
-  else
-    echo
-  fi
-}
-
 # less
 export LESS='-R'
 export LESSOPEN='| src-hilite-lesspipe.sh %s'
-
 export LANG="ja_JP.UTF-8"
-
-alias gsed=sed
-
-export GOBY_ROOT=$GOPATH/src/github.com/goby-lang/goby
-
-export PATH="$HOME/.yarn/bin:$PATH"
-
-if [ -d /usr/local/opt/mysql@5.6/bin ]; then
-  export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
-fi
-
-if [ -d /Applications/FirefoxESR.app/Contents/MacOS ]; then
-  export SLIMERJSLAUNCHER=/Applications/FirefoxESR.app/Contents/MacOS/firefox
-fi
-
-if [ -d /usr/local/opt/qt/bin ]; then
-  export PATH="/usr/local/opt/qt/bin:$PATH"
-fi
-
-if [ -d ~/google-cloud-sdk ]; then
-  export PATH=$PATH:~/google-cloud-sdk/bin
-fi
-
-# opam
-if [ -d ~/local/bin ]; then
-  export PATH=$PATH:~/local/bin
-fi
-
-# ESP32
-if [ -d ~/esp/xtensa-esp32-elf/ ]; then
-  export PATH=$PATH:~/esp/xtensa-esp32-elf/bin
-fi
-
-if [ -d ~/esp/esp-idf ]; then
-  export IDF_PATH=~/esp/esp-idf
-fi
-
-if [ -d ~/.cargo/bin ]; then
-  export PATH="$HOME/.cargo/bin:$PATH"
-  # racer
-  export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
-fi
-
-if [ -d ~/.opam ]; then
-   # OPAM configuration
-   . /home/sei/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
-fi
-
 export GPG_TTY=$(tty)
-
-if [ -d /usr/local/opt ]; then
-  export PATH="/usr/local/opt/mysql-client/bin:$PATH"
-  export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
-  export PATH="/usr/local/opt/mysql-client/bin:$PATH"
-  export PATH="/usr/local/opt/openssl/bin:$PATH"
-fi
-
-# export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
-if [ -f /opt/miniconda3/etc/profile.d/conda.sh ]; then
-  source /opt/miniconda3/etc/profile.d/conda.sh
-fi
 
 if [ -n "$(uname -a | grep Nix)" ]; then
   export GPG_TTY="$(tty)"
