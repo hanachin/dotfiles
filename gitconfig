@@ -1,22 +1,15 @@
 [user]
 	name = Seiei Miyagi
 	email = hanachin@gmail.com
-[color]
-	ui = auto
 [core]
 	excludesfile = ~/.gitignore
 	attributesfile = ~/.gitattributes
-	precomposeunicode = true
 [merge]
 	ff = true
-[push]
-	default = simple
 [ghq]
-  root = ~/src
-  user = hanachin
+    root = ~/src
 [alias]
-  delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
-  zenkesi = clean -fd
+    delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
@@ -24,11 +17,7 @@
 	process = git-lfs filter-process
 [commit]
 	gpgsign = true
-[diff]
-	compactionHeuristic = true
 [include]
 	path = ~/.gitconfig.local
-[init]
-	defaultBranch = main
 [github]
 	user = hanachin
