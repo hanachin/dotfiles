@@ -10,7 +10,6 @@ autoload -Uz compinit
 
 # autoload my funcs
 autoload -Uz gpi
-autoload -Uz growl
 autoload -Uz p
 autoload -Uz promptori
 
@@ -20,14 +19,6 @@ setopt AUTO_PUSHD
 setopt CORRECT
 setopt EXTENDED_HISTORY
 setopt SHARE_HISTORY
-
-# PATH
-
-## home bin
-if [ ! -d $HOME/bin ]; then
-  mkdir $HOME/bin
-fi
-export PATH=$HOME/bin:$PATH
 
 # variables
 export EDITOR='emacs -nw'
@@ -80,9 +71,6 @@ alias ti='tig'
 alias -g RED="RAILS_ENV=development"
 alias -g REP="RAILS_ENV=production"
 alias -g RET="RAILS_ENV=test"
-
-# tmuxinator
-source ~/.bin/tmuxinator.zsh
 
 # direnv
 if which direnv > /dev/null; then

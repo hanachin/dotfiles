@@ -1,3 +1,0 @@
-function growl() {
-  terminal-notifier -activate com.googlecode.iterm2 -title "Pssssst !!" -subtitle "A message from your shell:" -message "$@"
-}
